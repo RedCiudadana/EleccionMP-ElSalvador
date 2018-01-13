@@ -5,7 +5,7 @@
 {{title model.config.htmlTitle}}
 
 <div id="wrapper">
-  {{#bs-navbar type="inverse" position="fixed-top" fluid=false}}
+  {{#bs-navbar type="inverse" position="fixed-top" fluid=false as |navbar|}}
     <div class="navbar-header">
       {{!-- {{#bs-navbar-toggle}}
         <span class="sr-only">Toggle navigation</span>
@@ -19,8 +19,8 @@
           <img
             src="{{model.config.logoUrl}}"
             class="img-responsive"
-            title="{{model.config.logoTitle}}"
-            alt="{{model.config.logoTitle}}">
+            title="Elección MP"
+            alt="Elección MP">
         {{else}}
           <img
             src="app/img/logo-eleccion-mp.png"
@@ -31,13 +31,13 @@
       {{/link-to}}
     </div>
 
-    {{#bs-navbar-content}}
-      {{#bs-navbar-nav}}
+    {{#navbar.content}} 
+      {{#navbar.nav as |nav|}}
         {{#each model.config.navbarLinks as |link|}}
-          {{#bs-nav-item active=false}}{{#link-to link.route}}{{link.title}}{{/link-to}}{{/bs-nav-item}}
+          {{#nav.item active=false}}{{#link-to link.route}}{{link.title}}{{/link-to}}{{/nav.item}}
         {{/each}}
-      {{/bs-navbar-nav}}
-    {{/bs-navbar-content}}
+      {{/navbar.nav}}
+    {{/navbar.content}}
   {{/bs-navbar}}
 
   <div class="container">

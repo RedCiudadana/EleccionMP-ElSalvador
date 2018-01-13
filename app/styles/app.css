@@ -69,3 +69,34 @@ th.header {
 body {
   background-color: #ffffff;
 }
+
+.navbar-inverse {
+    background-color: #ffffff;
+    border: none;
+}
+
+.nav > li > a {
+    padding: 35px 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    /* Azul oscuro */
+    color: #1b2b3a;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.navbar-header {
+    padding: 15px 20px;
+    /* Amarillo */
+    background-color: #ffc80e;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

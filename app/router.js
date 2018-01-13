@@ -8,11 +8,6 @@ const Router = EmberRouter.extend(googlePageview, {
 });
 
 Router.map(function() {
-  this.route('institucion', function() {
-    this.route('frente-a-frente');
-  });
-
-  // TODO: Rutas pendiente de completar
   this.route('perfil', {path: '/perfil/:id'}, function() {
     this.route('frente-a-frente');
     this.route('propuestas');
@@ -21,17 +16,13 @@ Router.map(function() {
 
   this.route('perfiles');
 
-  this.route('comision', function() {
-    this.route('diputado', { path: '/:id' }, function() {});
+  this.route('postuladores', function() {
+    this.route('postulador', { path: '/:id' }, function() {});
   });
 
-  this.route('propuestas');
+  this.route('investigacion');
 
   this.route('metodologia');
-
-  this.route('contacto');
-
-  this.route('resultados');
 });
 
 export default Router;
