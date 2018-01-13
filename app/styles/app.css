@@ -76,7 +76,9 @@ body {
 }
 
 .nav > li > a {
-    padding: 35px 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 18px;
 }
 
 .navbar-inverse .navbar-nav > li > a {
