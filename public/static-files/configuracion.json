@@ -21,7 +21,7 @@
   },
   {
     "key": "siteMainTitle",
-    "value": "<h2 class=\"text-center\">Encuentra aquí todo los datos sobre tus representantes en el Congreso de la República de Guatemala.<br><small>¡Infórmate, interactúa e incide!</small></h2>",
+    "value": "",
     "tags": ""
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "key": "banner1Title",
-    "value": "<h3 class=\"portada\" style=\"text-align: center;\">DipuDatos</h3>",
+    "value": "",
     "tags": ""
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "key": "useFrontFilterWidget",
-    "value": "",
+    "value": "1",
     "tags": ""
   }
 ]

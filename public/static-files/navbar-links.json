@@ -1,19 +1,19 @@
 [
   {
-    "route": "institucion",
-    "title": "Congreso"
+    "route": "index",
+    "title": "Elección MP"
   },
   {
     "route": "perfiles",
-    "title": "Diputados"
+    "title": "Candidatos"
   },
   {
-    "route": "resultados",
-    "title": "Comisiones"
+    "route": "postuladores",
+    "title": "Postuladores"
   },
   {
-    "route": "partidos",
-    "title": "Bloques Legislativos"
+    "route": "investigacion",
+    "title": "Investigación"
   },
   {
     "route": "metodologia",

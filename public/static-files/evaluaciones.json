@@ -1,7 +1,7 @@
 [
   {
-    "id-postulador": "decano-usac",
-    "id-perfil": "alicia-dolores-beltran-lopez",
+    "postuladorId": "decano-usac",
+    "perfilId": "alicia-dolores-beltran-lopez",
     "resultado": "95"
   }
 ]
