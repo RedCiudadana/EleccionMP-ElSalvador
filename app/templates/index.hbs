@@ -2,7 +2,7 @@
   {{{model.config.siteMainTitle}}}
 {{/if}}
 
-<div>
+<div id="banner">
   {{#if model.config.banner1Title}}
     {{{model.config.banner1Title}}}
   {{/if}}
@@ -55,10 +55,18 @@
   {{/if}}
 </div>
 
-<div>
-  Descarga la app en
-  <img src="app/img/descarga-app-store.png" />
-  <img src="app/img/descarga-google-play.png" />
+<div id="descarga-app" class="container">
+  <div class="col-md-4">
+    <span id="descarga-app-title">Descarga la app en</span>
+  </div>
+
+  <div class="col-md-4 text-center">
+    <img class="img-responsive center" src="app/img/descarga-app-store.png" />
+  </div>
+
+  <div class="col-md-4 text-center">
+    <img class="img-responsive center" src="app/img/descarga-google-play.png" />
+  </div>
 </div>
 
 {{#if model.config.useFrontFilterWidget}}

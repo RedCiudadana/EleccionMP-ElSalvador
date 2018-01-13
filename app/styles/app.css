@@ -108,3 +108,35 @@ body {
         max-width: 1140px;
     }
 }
+
+#footer {
+    background-color: #1b2b3a;
+    color: #ffffff;
+}
+
+#banner img {
+    max-width: 1110px;
+}
+
+#descarga-app img {
+    max-height: 50px;
+}
+
+#descarga-app {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    /* Gris pálido */
+    background-color: #f1f1f2;
+    margin-bottom: 0px;
+}
+
+#descarga-app-title {
+    font-weight: bold;
+    font-size: 36px;
+    color: #1b2b3a;
+}
+
+.img-responsive.center {
+    margin-left: auto;
+    margin-right: auto;
+}
