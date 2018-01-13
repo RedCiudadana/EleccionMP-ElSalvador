@@ -1,17 +1,17 @@
 [
   {
     "key": "logoUrl",
-    "value": "https://raw.githubusercontent.com/RedCiudadana/PrisionAbierta/master/public/images/logo.png",
+    "value": "",
     "tags": ""
   },
   {
     "key": "logoTitle",
-    "value": "Prision Abierta",
+    "value": "Elección MP",
     "tags": ""
   },
   {
     "key": "twitterShareLink",
-    "value": "//twitter.com/share?via=Redxguate&amp;text=Conoce a los aspirantes a Procurador General de Derechos Humanos en Guatemala.",
+    "value": "//twitter.com/share?via=Redxguate&amp;text=Conoce a tus representantes en el Congreso de la República de Guatemala.",
     "tags": ""
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "key": "siteMainTitle",
-    "value": "<h2 class=\"text-center\"></h2>",
+    "value": "<h2 class=\"text-center\">Encuentra aquí todo los datos sobre tus representantes en el Congreso de la República de Guatemala.<br><small>¡Infórmate, interactúa e incide!</small></h2>",
     "tags": ""
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "key": "banner1Title",
-    "value": "",
+    "value": "<h3 class=\"portada\" style=\"text-align: center;\">DipuDatos</h3>",
     "tags": ""
   },
   {
@@ -56,21 +56,26 @@
   },
   {
     "key": "useFrontPortfolioVisualization",
-    "value": "",
-    "tags": ""
-  },
-  {
-    "key": "useFrontTableVisualization",
     "value": "1",
     "tags": ""
   },
   {
+    "key": "useFrontTableVisualization",
+    "value": "",
+    "tags": ""
+  },
+  {
     "key": "htmlTitle",
-    "value": "Prisión Abierta",
+    "value": "Elección MP",
     "tags": ""
   },
   {
     "key": "helloBarUrl",
+    "value": "",
+    "tags": ""
+  },
+  {
+    "key": "useFrontFilterWidget",
     "value": "",
     "tags": ""
   }

@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "route": "institucion",
+    "title": "Congreso"
+  },
+  {
+    "route": "perfiles",
+    "title": "Diputados"
+  },
+  {
+    "route": "resultados",
+    "title": "Comisiones"
+  },
+  {
+    "route": "partidos",
+    "title": "Bloques Legislativos"
+  },
+  {
+    "route": "metodologia",
+    "title": "Metodología"
+  }
+]
