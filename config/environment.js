@@ -28,8 +28,8 @@ module.exports = function(environment) {
 
       // Set null to retrieve data from the spreadsheet live. Otherwhise set the
       // URL from which to load de dumped static files
-      // staticFilesUrl: null
-      staticFilesUrl: 'http://beta.eleccionmp.org/static-files/'
+      staticFilesUrl: null
+      // staticFilesUrl: 'http://beta.eleccionmp.org/static-files/'
     },
 
     disqus: {
