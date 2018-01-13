@@ -65,3 +65,7 @@ th.header {
     margin-left: 15px;
     font-weight: normal;
 }
+
+body {
+  background-color: #ffffff;
+}

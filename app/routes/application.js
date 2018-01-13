@@ -2,7 +2,7 @@ import Ember from 'ember';
 import config from '../config/environment';
 import injectScript from 'ember-inject-script';
 
-const { isBlank, RSVP: { Promise } } = Ember;
+const { isBlank, RSVP: { Promise }, set } = Ember;
 
 export default Ember.Route.extend({
 
@@ -140,7 +140,6 @@ export default Ember.Route.extend({
     const _routing = this.get('_routing');
 
     return Ember.RSVP.hash({
-      partidos: this.store.findAll('partido'),
       perfiles: this.store.findAll('perfil'),
       config: spreadsheet.fetchConfig('configuracion')
         .then((configuracion) => {
@@ -208,9 +207,9 @@ export default Ember.Route.extend({
   setupController(controller, model) {
     this._super(controller, model);
 
-    model.config.navbarLinks = model.navbarLinks;
-    model.config.mainPageLinks = model.mainPageLinks;
-    model.config.mainPageSliderData = model.mainPageSliderData;
+    set(model.config, 'navbarLinks', model.navbarLinks);
+    set(model.config, 'mainPageLinks', model.mainPageLinks);
+    set(model.config, 'mainPageSliderData', model.mainPageSliderData);
   },
 
   actions: {
