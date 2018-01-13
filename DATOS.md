@@ -18,7 +18,7 @@ y [esta URL para producción](https://cdn.rawgit.com/RedCiudadana/EleccionMP/662
 
 Los principales archivos de datos disponibles son:
 
-##### [`perfil.json`](static-files/perfil.json)
+##### [`perfil.json`](public/static-files/perfil.json)
 
 Este archivo contiene los datos para el principal concepto a manejar dentro del sitio:
 los perfiles de los candidatos. Acerca de estos se cuenta, por ejemplo, con la siguiente
@@ -27,18 +27,18 @@ información: `id`, `nombre`, `biografia` (HTML), `planTrabajo` (html), `resulta
 `fb`, `tw`, `email`, `fotoUrl`.
 
 
-##### [`institucion-data.json`](static-files/institucion-data.json)
+##### [`institucion-data.json`](public/static-files/institucion-data.json)
 
 Cuenta con pares key, value que contienen la información acerca de la Comisión de
 postulación para la elección: nombre, trayectoria, fb, tw e email.
 
 
-##### [`postuladores-comision.json`](static-files/postuladores-comision.json)
+##### [`postuladores-comision.json`](public/static-files/postuladores-comision.json)
 
 Contiene la información de los miembros de la comisión: `id`, `nombre`, `fotoUrl`,
 `biografia` (HTML), `trayectoria` (HTML), `fb`, `tw`, `email`.
 
-##### [`evaluaciones.json`](static-files/evaluaciones.json)
+##### [`evaluaciones.json`](public/static-files/evaluaciones.json)
 
 Almacena los resultados (integers) de la evaluación de cada miembro de la comisión
 hacia cada cada candidato: `postuladorId`, `perfilId`, `resultado`.
