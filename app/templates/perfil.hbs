@@ -1,22 +1,4 @@
 <section id="election" style="margin-top: 35px;">
-
-  {{!-- <div class="row breadscrumb-social hidden-xs">
-    <div class="col-md-9">
-      {{bread-crumbs tagName="ul" outputStyle="bootstrap" linkable=true}}
-    </div>
-
-    <div class="col-md-3">
-      <div class="row social-button">
-        <div class="col-md-4">
-          {{twitter-share count='horizontal' hashtags='EleccionPDH'}}
-        </div>
-        <div class="col-md-4">
-          {{facebook-share fb-layout='button_count'}}
-        </div>
-      </div>
-    </div>
-  </div> --}}
-
   {{#if model.config.perfilFuncionalidades}}
     <div style="background-color: #ffffff; margin-bottom: 25px;">
       <div class="nav-candidator">
@@ -41,7 +23,7 @@
                 {{/if}}
               {{/active-link}}
             {{/each}}
-            <li>
+            <li class="social-media">
               {{twitter-share count='horizontal' hashtags='EleccionMP'}}
               {{facebook-share fb-layout='button_count'}}
             </li>

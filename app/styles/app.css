@@ -206,3 +206,21 @@ nav > .container {
 p.datos-abiertos {
     margin: 20px 0px;
 }
+
+.social-link-candidate {
+    color: #1b2b3a;
+}
+
+.container#biografia {
+    background-color: #1b2b3a;
+    color: #FFFFFF;
+}
+
+.nav-candidator .list-inline > li.social-media {
+    float: right;
+    padding-top: 15px;
+}
+
+.nav-candidator .list-inline > li.social-media > div {
+    margin-right: 10px;
+}
