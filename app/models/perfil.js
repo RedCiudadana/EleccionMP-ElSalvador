@@ -20,7 +20,7 @@ export default Model.extend({
   desempenio: attr(),
   historialPolitico: attr(),
   experienciaProfesional: attr(),
-  experienciaEnDH: attr(),
+  experienciaAcademica: attr(),
   sexo: attr(),
   estado: attr(),
 
