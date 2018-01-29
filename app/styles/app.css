@@ -178,6 +178,15 @@ nav > .container {
     color: #ffc80e;
 }
 
+.color-light-blue {
+    color: #75bbcc;
+}
+
+.btn-light-blue {
+    background-color: #75bbcc;
+    color: #FFFFFF;
+}
+
  /* Perfiles */
 .container-profile {
     background: #FFFFFF;
@@ -192,4 +201,8 @@ nav > .container {
 .profile-candidate .table tbody > tr > td span {
     opacity: 1.0;
     font-weight: bold;
+}
+
+p.datos-abiertos {
+    margin: 20px 0px;
 }

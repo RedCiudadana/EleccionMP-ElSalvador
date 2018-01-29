@@ -28,14 +28,19 @@
         </table>
       </div>
 
-      <div class="col-md-4 social-side">
+      <div class="col-md-4 social-side" style="padding-left: 40px; padding-right: 40px;">
         {{#if documentosDisponibles}}
-          <h3 class="text-center" style="padding-top: 0px;">Datos abiertos</h3>
+          <h4 style="font-weight: bold; padding-top: 20px;">Datos abiertos</h4>
         {{/if}}
 
         {{#each documentosDisponibles as |documento|}}
-          <p>
-            <a href="{{documento.urlDocumento}}" class="btn btn-{{documento.cssClasses}} width-full" target="_blank">
+          <p class="datos-abiertos">
+            <a
+              href="{{documento.urlDocumento}}"
+              class="btn btn-{{documento.cssClasses}} width-full"
+              target="_blank"
+              style="font-weight: 400;"
+            >
               {{documento.nombreDocumento}}
             </a>
           </p>
