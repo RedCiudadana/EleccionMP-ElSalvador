@@ -48,7 +48,7 @@ module.exports = function(environment) {
     ENV.contentSecurityPolicy = contentSecurityPolicy;
     ENV.contentSecurityPolicy['script-src'] = "'self' 'unsafe-eval' 192.168.250.206:* 172.20.10.9:*";
 
-    // ENV.APP.staticFilesUrl = 'http://192.168.250.206:6362/static-files/';
+    ENV.APP.staticFilesUrl = 'http://192.168.250.206:6362/static-files/';
   }
 
   if (environment === 'test') {

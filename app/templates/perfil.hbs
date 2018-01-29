@@ -1,7 +1,7 @@
-<section id="election">
-  <div class="row breadscrumb-social hidden-xs">
+<section id="election" style="margin-top: 35px;">
+
+  {{!-- <div class="row breadscrumb-social hidden-xs">
     <div class="col-md-9">
-      {{!-- TODO: Fix direct access functionality --}}
       {{bread-crumbs tagName="ul" outputStyle="bootstrap" linkable=true}}
     </div>
 
@@ -15,12 +15,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   {{#if model.config.perfilFuncionalidades}}
-    <div class="row">
+    <div style="background-color: #ffffff; margin-bottom: 25px;">
       <div class="nav-candidator">
-        <nav class="col-md-12">
+        <nav>
           <ul class="list-inline">
             {{#each model.config.perfilFuncionalidades as |link|}}
               {{#active-link}}
@@ -41,6 +41,10 @@
                 {{/if}}
               {{/active-link}}
             {{/each}}
+            <li>
+              {{twitter-share count='horizontal' hashtags='EleccionMP'}}
+              {{facebook-share fb-layout='button_count'}}
+            </li>
           </ul>
         </nav>
       </div>
