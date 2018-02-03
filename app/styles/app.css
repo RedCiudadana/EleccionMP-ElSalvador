@@ -230,3 +230,37 @@ p.datos-abiertos {
     padding: 25px;
     font-size: 16px;
 }
+
+.tabla-gradacion-content {
+    font-size: 18px;
+    font-weight: 900;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #1b2b3a;
+}
+
+.tabla-gradacion-content .icon-container {
+    font-size: 30px;
+    background-color: #75bbcc;
+    color: #ffffff;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 40px;
+}
+
+.tabla-gradacion-content > .row{
+    padding: 25px;
+    border-bottom: solid 1px #ddd;
+}
+
+.tabla-gradacion-content .text-container {
+    padding-left: 25px;
+    margin-top: 25px;
+}
+
+.tabla-gradacion-content .badge {
+    font-size: 14px;
+    padding: 11px 13px;
+    background-color: #1b2b3a;
+    margin-top: 20px;
+}

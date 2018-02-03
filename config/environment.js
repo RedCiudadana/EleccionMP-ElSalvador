@@ -46,9 +46,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.contentSecurityPolicy = contentSecurityPolicy;
-    ENV.contentSecurityPolicy['script-src'] = "'self' 'unsafe-eval' 192.168.250.206:* 172.20.10.9:*";
+    ENV.contentSecurityPolicy['script-src'] = "'self' 'unsafe-eval' db.devservir6:* 172.20.10.9:*";
 
-    ENV.APP.staticFilesUrl = 'http://192.168.250.206:6362/static-files/';
+    ENV.APP.staticFilesUrl = 'http://db.devservir6:6362/static-files/';
   }
 
   if (environment === 'test') {
