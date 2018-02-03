@@ -31,14 +31,18 @@
 
 .search-container-row {
     margin-bottom: 10px;
-    background-color: #d8dade;
+    padding: 30px 75px;
 }
 
-.search-container-row .ember-power-select-trigger {
+.search-container {
+    background-color: #a6a8ab;
+}
+
+.search-container .ember-power-select-trigger {
     text-align: center;
 }
 
-.search-container-row .ember-power-select-status-icon {
+.search-container .ember-power-select-status-icon {
     display: none;
 }
 
@@ -115,7 +119,7 @@ body {
 }
 
 #banner img {
-    max-width: 1110px;
+    max-width: 100%;
 }
 
 #descarga-app img {
@@ -123,8 +127,9 @@ body {
 }
 
 #descarga-app {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    /*padding-bottom: 30px;
+    padding-top: 30px;*/
+    padding: 30px;
     /* Gris pálido */
     background-color: #f1f1f2;
     margin-bottom: 0px;
@@ -269,4 +274,10 @@ p.datos-abiertos {
 
 .questionary {
     margin-top: 30px;
+}
+
+.filters-container {
+    margin-top: 20px;
+    color: #1b2b3a;
+    font-size: 18px;
 }
