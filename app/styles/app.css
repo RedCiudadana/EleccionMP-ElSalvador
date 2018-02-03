@@ -211,9 +211,11 @@ p.datos-abiertos {
     color: #1b2b3a;
 }
 
-.container#biografia {
+#biografia-container {
     background-color: #1b2b3a;
     color: #FFFFFF;
+    margin-top: 30px;
+    padding-top: 20px;
 }
 
 .nav-candidator .list-inline > li.social-media {
@@ -263,4 +265,8 @@ p.datos-abiertos {
     padding: 11px 13px;
     background-color: #1b2b3a;
     margin-top: 20px;
+}
+
+.questionary {
+    margin-top: 30px;
 }

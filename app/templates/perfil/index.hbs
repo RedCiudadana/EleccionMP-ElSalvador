@@ -76,96 +76,92 @@
   </div>
 </div>
 
-<div id="biografia" class="container" style="padding-top: 20px;">
-  <div class="row">
-    <div class="col-md-2 col-md-offset-1 text-center">
-      <i class="fa fa-file-text" style="font-size: 60px; padding-top: 30px;"></i>
-    </div>
-    <div class="col-md-8">
-      <h3>Biografía</h3>
-      <p style="margin-bottom: 30px;">
-        {{model.perfil.biografia}}
-      </p>
-    </div>
+<div id="biografia-container" class="row">
+  <div class="col-md-2 col-md-offset-1 text-center">
+    <i class="fa fa-file-text" style="font-size: 60px; padding-top: 30px;"></i>
+  </div>
+  <div class="col-md-8">
+    <h3>Biografía</h3>
+    <p style="margin-bottom: 30px;">
+      {{model.perfil.biografia}}
+    </p>
   </div>
 </div>
 
-<div class="questionary">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">Experiencia profesional</div>
+<div class="questionary row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Experiencia profesional</div>
 
-        <div class="panel-body">
-          {{model.perfil.experienciaProfesional}}
-        </div>
-      </div>
-
-      <div class="panel panel-default">
-        <div class="panel-heading">Experiencia académica</div>
-
-        <div class="panel-body">
-          {{model.perfil.experienciaAcademica}}
-        </div>
+      <div class="panel-body">
+        {{model.perfil.experienciaProfesional}}
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">Tabla de gradación</div>
 
-        <div class="panel-body tabla-gradacion-content">
-          <div class="row">
-            <div class="col-xs-2 text-center icon-container">
-              <i class="fa fa-graduation-cap"></i>
-            </div>
-            <div class="col-xs-8 text-container">
-              Aspectos académicos
-            </div>
-            <div class="col-xs-2">
-              <span class="badge">10</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-2 text-center icon-container">
-              <i class="fa fa-suitcase"></i>
-            </div>
-            <div class="col-xs-8 text-container">
-              Aspectos profesionales
-            </div>
-            <div class="col-xs-2">
-              <span class="badge">10</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-2 text-center icon-container">
-              <i class="fa fa-check"></i>
-            </div>
-            <div class="col-xs-8 text-container">
-              Proyección humana e idoneidad
-            </div>
-            <div class="col-xs-2">
-              <span class="badge">10</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-2 text-center icon-container">
-              <i class="fa fa-handshake-o"></i>
-            </div>
-            <div class="col-xs-8 text-container">
-              Cualidades éticas y de probidad
-            </div>
-            <div class="col-xs-2">
-              <span class="badge">10</span>
-            </div>
-          </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Experiencia académica</div>
 
-          <div class="row">
-            <div class="col-xs-10">
-              Puntaje total
-            </div>
-            <div class="col-xs-2">
-              <span class="badge">10</span>
-            </div>
+      <div class="panel-body">
+        {{model.perfil.experienciaAcademica}}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Tabla de gradación</div>
+
+      <div class="panel-body tabla-gradacion-content">
+        <div class="row">
+          <div class="col-xs-2 text-center icon-container">
+            <i class="fa fa-graduation-cap"></i>
+          </div>
+          <div class="col-xs-8 text-container">
+            Aspectos académicos
+          </div>
+          <div class="col-xs-2">
+            <span class="badge">10</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2 text-center icon-container">
+            <i class="fa fa-suitcase"></i>
+          </div>
+          <div class="col-xs-8 text-container">
+            Aspectos profesionales
+          </div>
+          <div class="col-xs-2">
+            <span class="badge">10</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2 text-center icon-container">
+            <i class="fa fa-check"></i>
+          </div>
+          <div class="col-xs-8 text-container">
+            Proyección humana e idoneidad
+          </div>
+          <div class="col-xs-2">
+            <span class="badge">10</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2 text-center icon-container">
+            <i class="fa fa-handshake-o"></i>
+          </div>
+          <div class="col-xs-8 text-container">
+            Cualidades éticas y de probidad
+          </div>
+          <div class="col-xs-2">
+            <span class="badge">10</span>
+          </div>
+        </div>
+
+        <div class="row" style="padding-bottom: 45px;">
+          <div class="col-xs-10 text-container">
+            Puntaje total
+          </div>
+          <div class="col-xs-2">
+            <span class="badge">10</span>
           </div>
         </div>
       </div>
