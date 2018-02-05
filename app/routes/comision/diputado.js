@@ -10,6 +10,7 @@ export default Ember.Route.extend({
 
     return Ember.RSVP.hash({
       postulador: this.store.peekRecord('postulador-comision', params.id),
+      postuladores: this.modelFor('comision').diputados,
       postuladorFuncionalidades: spreadsheet
         .fetch('postulador-funcionalidades', 'config')
         .then((links) => {
@@ -43,8 +44,6 @@ export default Ember.Route.extend({
   },
 
   afterModel(model) {
-    console.log(model.resultadosEvaluaciones);
-
     if (!Ember.isNone(model.postulador.get('nombre'))) {
       this.set('breadCrumb', {
         title: model.postulador.get('nombre')

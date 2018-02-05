@@ -112,6 +112,24 @@ export default Ember.Route.extend({
             // serializer.set('frenteAFrenteFields', Ember.A());
           }),
 
+        spreadsheetService
+          .fetchConfig('diputado-frente-a-frente-configuracion')
+          .then((configuracionData) => {
+            let postuladorFrenteAFrenteDataArray = Ember.A([]);
+
+            Ember.A(configuracionData).forEach((item) => {
+              postuladorFrenteAFrenteDataArray.pushObject({
+                field: item.field,
+                label: item.label,
+                section: item.section
+              });
+            });
+
+            let serializer = this.store.serializerFor('postulador-comision');
+
+            serializer.set('frenteAFrenteFields', postuladorFrenteAFrenteDataArray);
+          }),
+
         /**
          * Setear los campos a utilizar en la funcionalidad de frente-a-frente
          */
@@ -128,9 +146,9 @@ export default Ember.Route.extend({
               });
             });
 
-            let prefilSerializer = this.store.serializerFor('perfil');
+            let serializer = this.store.serializerFor('perfil');
 
-            prefilSerializer.set('frenteAFrenteFields', perfilFrenteAFrenteDataArray);
+            serializer.set('frenteAFrenteFields', perfilFrenteAFrenteDataArray);
           })
       ]));
   },
