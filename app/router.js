@@ -17,7 +17,10 @@ Router.map(function() {
   this.route('perfiles');
 
   this.route('comision', function() {
-    this.route('diputado', { path: '/:id' }, function() {});
+    this.route('diputado', { path: '/:id' }, function() {
+      this.route('frente-a-frente');
+      this.route('fact-checking');
+    });
   });
 
   this.route('investigacion');

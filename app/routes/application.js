@@ -106,10 +106,10 @@ export default Ember.Route.extend({
               });
             });
 
-            let diputadoSerializer = this.store.serializerFor('diputado-comision');
+            let serializer = this.store.serializerFor('postulador-comision');
 
-            diputadoSerializer.set('informacionGeneralFields', Ember.A());
-            diputadoSerializer.set('frenteAFrenteFields', Ember.A());
+            serializer.set('informacionGeneralFields', diputadoDataArray);
+            // serializer.set('frenteAFrenteFields', Ember.A());
           }),
 
         /**

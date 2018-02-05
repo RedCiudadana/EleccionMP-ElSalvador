@@ -6,9 +6,9 @@ import { belongsTo } from 'ember-data/relationships';
 export default Model.extend({
   nombre: attr(),
   fotoUrl: attr(),
-  fotoUrlPartido: attr(),
-  cargoNombreCompleto: attr(),
-  cargoNombreCorto: attr(),
+  fotoInstitucionUrl: attr(),
+  cargo: attr(),
+  institucion: attr(),
   profesion: attr(),
   educacion: attr(),
   fechaNacimiento: attr(),
@@ -18,9 +18,13 @@ export default Model.extend({
   email: attr(),
   fb: attr(),
   tw: attr(),
+  emailInstitucion: attr(),
+  fbInstitucion: attr(),
+  twInstitucion: attr(),
   direccion: attr(),
   telefono: attr(),
   biografia: attr(),
+  trayectoria: attr(),
   desempenio: attr(),
   historialPolitico: attr(),
 
@@ -35,7 +39,7 @@ export default Model.extend({
     return 'images/Magistrado.jpg';
   }),
 
-  fotoPartido: Ember.computed('fotoUrlPartido', function() {
-    return this.get('fotoUrlPartido');
+  fotoInstitucion: Ember.computed('fotoInstitucionUrl', function() {
+    return this.get('fotoInstitucionUrl');
   })
 });

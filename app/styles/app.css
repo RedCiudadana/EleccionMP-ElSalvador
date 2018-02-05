@@ -276,6 +276,11 @@ p.datos-abiertos {
     margin-top: 20px;
 }
 
+.postulador-paneles .tabla-gradacion-content .badge {
+    font-size: 20px;
+    background-color: #75bbcc;
+}
+
 .questionary {
     margin-top: 30px;
 }
@@ -297,4 +302,17 @@ p.datos-abiertos {
 
 .portfolio-5 .portfolio-item {
     height: 315px;
+}
+
+.logo-partido {
+    margin-bottom: 0px;
+}
+
+.postulador-paneles {
+    margin-top: 20px;
+}
+
+.postulador-paneles .panel-default > .panel-heading {
+    font-weight: 900;
+    background-color: #1b2b3a;
 }
