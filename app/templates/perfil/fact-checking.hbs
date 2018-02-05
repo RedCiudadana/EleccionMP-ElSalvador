@@ -32,7 +32,15 @@
                     <p>
                       {{{item.quote}}}
                     </p>
-                    <p class="text-right">{{perfil.nombre}}</p>
+                    <p class="text-right">
+                      {{#if item.quoteUrl}}
+                        <a href={{item.quoteUrl}} target="_blank">
+                          {{perfil.nombre}}
+                        </a>
+                      {{else}}
+                        {{perfil.nombre}}
+                      {{/if}}
+                    </p>
                   </div>
                 </div>
                 <div class="col-md-1">
@@ -42,7 +50,15 @@
                     <p>
                       {{{item.fact}}}
                     </p>
-                    <p class="text-right">{{item.source}}</p>
+                    <p class="text-right">
+                      {{#if item.sourceUrl}}
+                        <a href={{item.sourceUrl}} target="_blank">
+                          {{item.source}}
+                        </a>
+                      {{else}}
+                        {{item.source}}
+                      {{/if}}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -70,7 +86,17 @@
                 <p>
                   {{{item.fact}}}
                 </p>
-                <p class="text-right"><small>{{item.source}}</small></p>
+                <p class="text-right">
+                  <small>
+                    {{#if item.sourceUrl}}
+                      <a href={{item.sourceUrl}} target="_blank">
+                        {{item.source}}
+                      </a>
+                    {{else}}
+                      {{item.source}}
+                    {{/if}}
+                  </small>
+                </p>
               </div>
             {{/each-in}}
           </div>
