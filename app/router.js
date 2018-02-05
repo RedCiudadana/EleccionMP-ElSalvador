@@ -16,7 +16,7 @@ Router.map(function() {
 
   this.route('perfiles');
 
-  this.route('postuladores', function() {
+  this.route('comision', function() {
     this.route('postulador', { path: '/:id' }, function() {});
   });
 

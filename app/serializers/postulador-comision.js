@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.JSONSerializer.extend({
-  informacionGeneralFields: null,
-  frenteAFrenteFields: null,
+  informacionGeneralFields: [],
+  frenteAFrenteFields: [],
 
   normalize(modelClass, resourceHash) {
     resourceHash.informacionGeneral = {};

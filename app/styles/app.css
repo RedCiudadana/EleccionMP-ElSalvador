@@ -90,6 +90,10 @@ body {
     color: #1b2b3a;
 }
 
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #1b2b3a;
+}
+
 .navbar-brand img {
     max-height: 40px;
 }
@@ -284,4 +288,13 @@ p.datos-abiertos {
 
 #compare-candidates div.col-md-12:first-child {
     margin-top: 0px;
+}
+
+.portfolio-item .portfolio-image, .portfolio-item .portfolio-image a, .portfolio-item .portfolio-image img {
+    max-height: 250px;
+    width: auto;
+}
+
+.portfolio-5 .portfolio-item {
+    height: 315px;
 }
