@@ -7,19 +7,19 @@
     <article class="portfolio-item pf-media {{diputado.institucionSelector}}">
 
       <div class="portfolio-image">
-        {{#link-to 'comision.postulador' diputado.id}}
+        {{#link-to 'comision.diputado' diputado.id}}
           <img alt="{{diputado.cargoNombreCompleto}}" src="{{diputado.fotoPerfil}}" />
         {{/link-to}}
       </div>
 
       <div class="portfolio-desc">
         <h3>
-          {{#link-to 'comision.postulador' diputado.id}}
+          {{#link-to 'comision.diputado' diputado.id}}
             {{diputado.nombre}}
           {{/link-to}}
         </h3>
         <span>
-          {{#link-to 'comision.postulador' diputado.id}}
+          {{#link-to 'comision.diputado' diputado.id}}
             {{diputado.cargoNombreCorto}}
           {{/link-to}}
         </span>
