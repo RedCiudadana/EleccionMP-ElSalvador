@@ -21,8 +21,8 @@
               <div class="row">
                 <div class="col-md-1">
                   <img
-                    src="{{postulador.fotoPerfil}}"
-                    alt="{{postulador.nombre}}"
+                    src="{{perfil.fotoPerfil}}"
+                    alt="{{perfil.nombre}}"
                     border="0"
                     class="img-responsive"
                   >
@@ -35,10 +35,10 @@
                     <p class="text-right">
                       {{#if item.quoteUrl}}
                         <a href={{item.quoteUrl}} target="_blank">
-                          {{postulador.nombre}}
+                          {{perfil.nombre}}
                         </a>
                       {{else}}
-                        {{postulador.nombre}}
+                        {{perfil.nombre}}
                       {{/if}}
                     </p>
                   </div>
@@ -80,7 +80,7 @@
                 <p>
                   {{{item.quote}}}
                 </p>
-                <p class="text-right"><small>{{postulador.nombre}}</small></p>
+                <p class="text-right"><small>{{perfil.nombre}}</small></p>
               </div>
               <div class="response-candidate-dos">
                 <p>
