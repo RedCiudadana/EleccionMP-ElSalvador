@@ -281,3 +281,7 @@ p.datos-abiertos {
     color: #1b2b3a;
     font-size: 18px;
 }
+
+#compare-candidates div.col-md-12:first-child {
+    margin-top: 0px;
+}
