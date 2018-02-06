@@ -120,6 +120,23 @@ html, body {
 #footer {
     background-color: #1b2b3a;
     color: #ffffff;
+    padding-bottom: 40px;
+}
+
+#footer img {
+    opacity: 1;
+}
+
+#footer .logo {
+    margin-right: 0px;
+}
+
+#footer a {
+    color: #ffffff;
+}
+
+#footer i {
+    width: 14px;
 }
 
 #banner img {
