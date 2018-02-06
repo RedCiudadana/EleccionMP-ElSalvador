@@ -57,7 +57,7 @@
 
 <div id="descarga-app" class="row">
   <div class="col-md-4">
-    <span id="descarga-app-title">Descarga la app en</span>
+    <span id="descarga-app-title">Descarga la app en:</span>
   </div>
 
   <div class="col-md-4 text-center">
@@ -192,13 +192,13 @@
 {{/if}}
 
 {{#if model.config.mainPageLinks}}
-  <div class="row main-page-links" style="margin-top: 20px;">
+  <div class="row main-page-links bg-color-gray" style="margin-top: 20px; padding: 20px 5px;">
     {{#each model.config.mainPageLinks as |link|}}
-      <div class="col-md-4">
+      <div class="col-sm-6">
         {{#if link.link}}
           <a href="{{link.link}}">
             {{#if link.imageLink}}
-              <img src="{{link.imageLink}}" title="{{link.title}}"/>
+              <img src="{{link.imageLink}}" title="{{link.title}}" class="img-responsive center"/>
             {{else}}
               {{link.title}}
             {{/if}}
@@ -206,7 +206,7 @@
         {{else}}
           {{#link-to link.route}}
             {{#if link.imageLink}}
-              <img src="{{link.imageLink}}" title="{{link.title}}"/>
+              <img src="{{link.imageLink}}" title="{{link.title}}" class="img-responsive center"/>
             {{else}}
               {{link.title}}
             {{/if}}

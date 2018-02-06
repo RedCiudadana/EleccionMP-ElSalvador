@@ -13,7 +13,7 @@
 }
 
 .container {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 .btn.width-full {
@@ -70,8 +70,8 @@ th.header {
     font-weight: normal;
 }
 
-body {
-  background-color: #ffffff;
+html, body {
+    background-color: #ffffff;
 }
 
 .navbar-inverse {
@@ -151,8 +151,7 @@ body {
 }
 
 .content-container {
-    /* Gris palidísimo */
-    background-color: #e6e7e8;
+    background-color: #fff;
 }
 
 nav > .container {
@@ -176,7 +175,12 @@ nav > .container {
 }
 
 .color-gray {
+    /* Gris palidísimo */
     color: #e6e7e8;
+}
+
+.bg-color-gray {
+    background-color: #e6e7e8;
 }
 
 .color-blue {
