@@ -342,3 +342,20 @@ p.datos-abiertos {
     font-weight: 900;
     background-color: #1b2b3a;
 }
+
+.justify {
+    text-align: justify;
+}
+
+.panel-body {
+    padding: 30px;
+}
+
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family:  'Source Sans Pro', sans-serif;
+}
+
