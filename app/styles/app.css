@@ -74,6 +74,10 @@ html, body {
     background-color: #ffffff;
 }
 
+body.perfil .container.content-container {
+    background-color: #e6e7e8;
+}
+
 .navbar-inverse {
     background-color: #ffffff;
     border: none;
@@ -121,6 +125,7 @@ html, body {
     background-color: #1b2b3a;
     color: #ffffff;
     padding-bottom: 40px;
+    line-height: 26px;
 }
 
 #footer img {

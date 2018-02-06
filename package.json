@@ -55,6 +55,7 @@
     "ember-radio-button": "^1.2.0",
     "ember-resolver": "^4.0.0",
     "ember-route-action-helper": "^2.0.6",
+    "ember-set-body-class": "^0.3.0",
     "ember-share": "^0.2.3",
     "ember-social": "^0.3.0",
     "ember-source": "~2.16.0",
