@@ -64,7 +64,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.googleAnalytics = {
-      webPropertyId: 'UA-101167670-1'
+      webPropertyId: 'UA-113727052-1'
     };
 
     ENV.APP.staticFilesUrl = 'http://eleccionmp.org/static-files/';
