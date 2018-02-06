@@ -24,6 +24,12 @@ export default Model.extend({
   sexo: attr(),
   estado: attr(),
 
+  notaAreaEvaluada1: attr(),
+  notaAreaEvaluada2: attr(),
+  notaAreaEvaluada3: attr(),
+  notaAreaEvaluada4: attr(),
+  resultadosEvaluacion: attr(),
+
   informacionGeneral: attr('informacion-general'),
   recuadros: attr('frente-a-frente'),
   frenteAFrente: attr('frente-a-frente'),

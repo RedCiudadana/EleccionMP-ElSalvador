@@ -122,7 +122,7 @@
             Aspectos académicos
           </div>
           <div class="col-xs-2">
-            <span class="badge">10</span>
+            <span class="badge">{{model.perfil.notaAreaEvaluada1}}</span>
           </div>
         </div>
         <div class="row">
@@ -133,7 +133,7 @@
             Aspectos profesionales
           </div>
           <div class="col-xs-2">
-            <span class="badge">10</span>
+            <span class="badge">{{model.perfil.notaAreaEvaluada2}}</span>
           </div>
         </div>
         <div class="row">
@@ -144,7 +144,7 @@
             Proyección humana e idoneidad
           </div>
           <div class="col-xs-2">
-            <span class="badge">10</span>
+            <span class="badge">{{model.perfil.notaAreaEvaluada3}}</span>
           </div>
         </div>
         <div class="row">
@@ -155,7 +155,13 @@
             Cualidades éticas y de probidad
           </div>
           <div class="col-xs-2">
-            <span class="badge">10</span>
+            <span class="badge">
+              {{#if model.perfil.notaAreaEvaluada4}}
+                <li class="fa fa-check"></li>
+              {{else}}
+                <li class="fa fa-times"></li>
+              {{/if}}
+            </span>
           </div>
         </div>
 
@@ -164,7 +170,7 @@
             Puntaje total
           </div>
           <div class="col-xs-2">
-            <span class="badge">10</span>
+            <span class="badge">{{model.perfil.resultadosEvaluacion}}</span>
           </div>
         </div>
       </div>
