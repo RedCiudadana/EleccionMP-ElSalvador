@@ -28,8 +28,8 @@ module.exports = function(environment) {
 
       // Set null to retrieve data from the spreadsheet live. Otherwhise set the
       // URL from which to load de dumped static files
-      staticFilesUrl: null
-      // staticFilesUrl: 'http://beta.eleccionmp.org/static-files/'
+      // staticFilesUrl: null
+      // staticFilesUrl: 'http://eleccionmp.org/static-files/'
     },
 
     disqus: {
@@ -66,6 +66,8 @@ module.exports = function(environment) {
     ENV.googleAnalytics = {
       webPropertyId: 'UA-101167670-1'
     };
+
+    ENV.APP.staticFilesUrl = 'http://eleccionmp.org/static-files/';
   }
 
   return ENV;
