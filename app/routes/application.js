@@ -1,16 +1,20 @@
 import Ember from 'ember';
 import config from '../config/environment';
 import injectScript from 'ember-inject-script';
+import ResetScrollMixin from 'ember-cli-reset-scroll';
 
 const { isBlank, RSVP: { Promise }, set } = Ember;
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(ResetScrollMixin, {
 
   spreadsheets: Ember.inject.service(),
 
   _routing: Ember.inject.service('-routing'),
 
   ajax: Ember.inject.service(),
+
+  // Scrolls to top
+  resetScroll: undefined,
 
   breadCrumb: {
     title: 'application breadcrumb'
