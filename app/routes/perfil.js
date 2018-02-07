@@ -74,7 +74,8 @@ export default Ember.Route.extend({
     model.config.perfilFuncionalidades = model.perfilFuncionalidades;
 
     controller.setProperties({
-      disqusShortname: config.disqus.shortname
+      disqusShortname: config.disqus.shortname,
+      applicationConfig: this.modelFor('application').config
     });
   },
 
