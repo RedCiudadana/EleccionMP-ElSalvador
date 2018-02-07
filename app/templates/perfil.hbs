@@ -37,3 +37,9 @@
 
   {{outlet}}
 </section>
+
+{{#if disqusShortname}}
+  <div class="row bg-color-white">
+    {{disqus-comments identifier=model.perfil.disqusIdentifier}}
+  </div>
+{{/if}}

@@ -205,6 +205,10 @@ nav > .container {
     background-color: #e6e7e8;
 }
 
+.bg-color-white {
+    background-color: #ffffff;
+}
+
 .color-blue {
     color: #12a2e0;
 }
@@ -251,6 +255,7 @@ p.datos-abiertos {
     color: #FFFFFF;
     margin-top: 30px;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .nav-candidator .list-inline > li.social-media {
@@ -270,10 +275,18 @@ p.datos-abiertos {
 
 .tabla-gradacion-content {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 600;
     padding-top: 0px;
     padding-bottom: 0px;
     color: #1b2b3a;
+}
+
+.questionary .panel-heading {
+    font-weight: 600;
+}
+
+.badge {
+    font-weight: 600;
 }
 
 .tabla-gradacion-content .icon-container {

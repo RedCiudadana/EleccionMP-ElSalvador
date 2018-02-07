@@ -33,7 +33,7 @@ module.exports = function(environment) {
     },
 
     disqus: {
-      shortname: null
+      shortname: 'eleccion-mp'
     },
 
     contentSecurityPolicy: contentSecurityPolicy

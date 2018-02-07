@@ -41,5 +41,9 @@ export default Model.extend({
 
   fotoInstitucion: Ember.computed('fotoInstitucionUrl', function() {
     return this.get('fotoInstitucionUrl');
+  }),
+
+  disqusIdentifier: Ember.computed('id', function() {
+    return `postulador-${this.get('id')}`;
   })
 });

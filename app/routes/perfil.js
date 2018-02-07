@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import config from '../config/environment';
 
 export default Ember.Route.extend({
   spreadsheets: Ember.inject.service(),
@@ -71,6 +72,10 @@ export default Ember.Route.extend({
     this._super(controller, model);
 
     model.config.perfilFuncionalidades = model.perfilFuncionalidades;
+
+    controller.setProperties({
+      disqusShortname: config.disqus.shortname
+    });
   },
 
   actions: {
