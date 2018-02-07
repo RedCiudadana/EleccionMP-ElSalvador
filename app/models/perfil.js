@@ -28,6 +28,7 @@ export default Model.extend({
   notaAreaEvaluada2: attr(),
   notaAreaEvaluada3: attr(),
   notaAreaEvaluada4: attr(),
+  notaAreaEvaluada4Texto: attr(),
   resultadosEvaluacion: attr(),
 
   informacionGeneral: attr('informacion-general'),
