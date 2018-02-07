@@ -276,9 +276,9 @@ input, button, select, textarea {
     color: #14b9d5;
 }
 
-.navbar-nav {
+/*.navbar-nav {
     float: right;
-}
+}*/
 
 .navbar-brand {
     padding: 5px 13px;
@@ -1230,9 +1230,9 @@ animation: doscaras 4s infinite;
 }
 
 @media (max-width: 480px) {
-    .navbar-brand img {
+    /*.navbar-brand img {
         width: 198px;
-    }
+    }*/
 
     .profile-candidate {
         min-height: 425px;

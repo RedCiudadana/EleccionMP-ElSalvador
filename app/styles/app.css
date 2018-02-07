@@ -218,6 +218,7 @@ nav > .container {
 }
 
 .color-light-blue {
+    /*Azul claro o celeste*/
     color: #75bbcc;
 }
 
@@ -378,4 +379,49 @@ h5, h3 {
 
 a:focus {
     text-decoration: none;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #75bbcc;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #ffc80e;
+}
+
+/* Small devices only */
+@media (max-width: 480px) {
+    .navbar-brand img {
+        width: auto;
+    }
+
+    #descarga-app {
+        padding: 15px 0px;
+    }
+
+    .search-container-row {
+        padding: 30px 15px 0px 15px;
+    }
+
+    .jumbotron {
+        margin-bottom: 10px;
+    }
+
+    .portfolio-item .portfolio-image img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portfolio-desc {
+        text-align: center;
+    }
 }
