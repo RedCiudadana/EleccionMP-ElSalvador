@@ -45,6 +45,8 @@
 
 {{#if disqusShortname}}
   <div class="row bg-color-white">
-    {{disqus-comments identifier=model.perfil.disqusIdentifier}}
+    <div class="col-xs-12">
+      {{disqus-comments identifier=model.perfil.disqusIdentifier}}
+    </div>
   </div>
 {{/if}}

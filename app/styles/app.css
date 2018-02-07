@@ -282,6 +282,11 @@ p.datos-abiertos {
     color: #1b2b3a;
 }
 
+.panel-body.tabla-gradacion-content {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .questionary .panel-heading {
     font-weight: 600;
 }
@@ -423,5 +428,15 @@ a:focus {
 
     .portfolio-desc {
         text-align: center;
+    }
+
+    .tabla-gradacion-content .text-container {
+        padding-left: 0px;
+        margin-top: 13px;
+    }
+
+    .tabla-gradacion-content > .row {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
