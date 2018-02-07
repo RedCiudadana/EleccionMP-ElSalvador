@@ -291,14 +291,14 @@ p.datos-abiertos {
 
 .tabla-gradacion-content .icon-container {
     font-size: 30px;
-    background-color: #75bbcc;
+    background-color: #1b2b3a;
     color: #ffffff;
     padding-top: 18px;
     padding-bottom: 18px;
     border-radius: 40px;
 }
 
-.tabla-gradacion-content > .row{
+.tabla-gradacion-content > .row {
     padding: 25px;
     border-bottom: solid 1px #ddd;
 }
@@ -311,7 +311,7 @@ p.datos-abiertos {
 .tabla-gradacion-content .badge {
     font-size: 14px;
     padding: 11px 13px;
-    background-color: #1b2b3a;
+    background-color: #75bbcc;
     margin-top: 20px;
 }
 
