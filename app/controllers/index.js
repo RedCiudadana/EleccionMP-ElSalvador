@@ -3,6 +3,8 @@ import Ember from 'ember';
 const { computed } = Ember;
 
 export default Ember.Controller.extend({
+  estaEnProceso: true,
+
   currentSelector: computed(
     'esMujer',
     'esHombre',

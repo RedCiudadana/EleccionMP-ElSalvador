@@ -2,6 +2,8 @@ import Controller from '@ember/controller';
 import { computed } from '@ember/object';
 
 export default Controller.extend({
+  estaEnProceso: true,
+
   currentSelector: computed(
     'esMujer',
     'esHombre',
