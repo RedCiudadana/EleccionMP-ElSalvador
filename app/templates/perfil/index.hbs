@@ -116,45 +116,49 @@
       <div class="panel-body tabla-gradacion-content">
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
-            <i class="fa fa-graduation-cap"></i>
+            {{!-- <i class="fa fa-graduation-cap"></i> --}}
+            <img src="app/img/logo-aspectos-academicos.png" class="img-responsive center" />
           </div>
-          <div class="col-xs-6 col-xs-offset-1 col-md-8 text-container">
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
             Aspectos académicos
           </div>
-          <div class="col-xs-2 col-md-2">
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
             <span class="badge">{{model.perfil.notaAreaEvaluada1}}</span>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
-            <i class="fa fa-suitcase"></i>
+            {{!-- <i class="fa fa-suitcase"></i> --}}
+            <img src="app/img/logo-aspectos-profesionales.png" class="img-responsive center" />
           </div>
-          <div class="col-xs-6 col-xs-offset-1 col-md-8 text-container">
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
             Aspectos profesionales
           </div>
-          <div class="col-xs-2 col-md-2">
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
             <span class="badge">{{model.perfil.notaAreaEvaluada2}}</span>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
-            <i class="fa fa-check"></i>
+            {{!-- <i class="fa fa-check"></i> --}}
+            <img src="app/img/logo-proyeccion-humana.png" class="img-responsive center" />
           </div>
-          <div class="col-xs-6 col-xs-offset-1 col-md-8 text-container">
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
             Proyección humana e idoneidad
           </div>
-          <div class="col-xs-2 col-md-2">
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
             <span class="badge">{{model.perfil.notaAreaEvaluada3}}</span>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
-            <i class="fa fa-handshake-o"></i>
+            {{!-- <i class="fa fa-handshake-o"></i> --}}
+            <img src="app/img/logo-cualidades-eticas.png" class="img-responsive center" />
           </div>
-          <div class="col-xs-6 col-xs-offset-1 col-md-8 text-container">
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
             Cualidades éticas y de probidad
           </div>
-          <div class="col-xs-2 col-md-2">
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
             <span class="badge">
               {{#if model.perfil.notaAreaEvaluada4}}
                 <li class="fa fa-check"></li>
@@ -165,11 +169,11 @@
           </div>
         </div>
 
-        <div class="row" style="padding-bottom: 45px;">
+        <div class="row">
           <div class="col-xs-10 text-container">
             Puntaje total
           </div>
-          <div class="col-xs-2">
+          <div class="col-xs-2" style="padding-left: 5px; padding-right: 5px;">
             <span class="badge">{{model.perfil.resultadosEvaluacion}}</span>
           </div>
         </div>
