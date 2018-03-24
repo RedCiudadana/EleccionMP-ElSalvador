@@ -56,6 +56,12 @@ export default Ember.Route.extend({
 
               return true;
             });
+        }),
+      tachas: spreadsheet
+        .fetch('tachas')
+        .then((registros) => {
+          return Ember.A(registros)
+            .filterBy('perfilId', perfil.get('id'));
         })
     });
   },

@@ -4,35 +4,63 @@ import attr from 'ember-data/attr';
 
 export default Model.extend({
   nombre: attr(),
+
   fotoUrl: attr(),
+
   cargoNombreCompleto: attr(),
+
   cargoNombreCorto: attr(),
+
   profesion: attr(),
+
   educacion: attr(),
+
   fechaNacimiento: attr(),
+
   lugarNacimiento: attr(),
+
   email: attr(),
+
   fb: attr(),
+
   tw: attr(),
+
   direccion: attr(),
+
   telefono: attr(),
+
   biografia: attr(),
+
   desempenio: attr(),
+
   historialPolitico: attr(),
+
   experienciaProfesional: attr(),
+
   experienciaAcademica: attr(),
+
+  planTrabajo: attr(),
+
   sexo: attr(),
+
   estado: attr(),
 
   notaAreaEvaluada1: attr(),
+
   notaAreaEvaluada2: attr(),
+
   notaAreaEvaluada3: attr(),
+
   notaAreaEvaluada4: attr(),
+
   notaAreaEvaluada4Texto: attr(),
+
   resultadosEvaluacion: attr(),
 
   informacionGeneral: attr('informacion-general'),
+
   recuadros: attr('frente-a-frente'),
+
   frenteAFrente: attr('frente-a-frente'),
 
   fotoPerfil: Ember.computed('fotoUrl', function() {

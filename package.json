@@ -50,6 +50,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-inject-script": "^0.0.3",
     "ember-load-initializers": "^1.0.0",
+    "ember-math-helpers": "^2.4.0",
     "ember-one-way-controls": "^3.0.1",
     "ember-page-title": "^3.2.2",
     "ember-power-select": "^1.10.4",

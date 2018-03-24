@@ -108,12 +108,21 @@
         {{model.perfil.experienciaAcademica}}
       </div>
     </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Plan de trabajo</div>
+
+      <div class="panel-body justify">
+        {{model.perfil.planTrabajo}}
+      </div>
+    </div>
   </div>
+
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">Tabla de gradación</div>
 
-      <div class="panel-body tabla-gradacion-content">
+      <div class="panel-body tabla-gradacion-content no-padding-top-bottom">
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
             {{!-- <i class="fa fa-graduation-cap"></i> --}}
@@ -126,6 +135,7 @@
             <span class="badge">{{model.perfil.notaAreaEvaluada1}}</span>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
             {{!-- <i class="fa fa-suitcase"></i> --}}
@@ -138,6 +148,7 @@
             <span class="badge">{{model.perfil.notaAreaEvaluada2}}</span>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
             {{!-- <i class="fa fa-check"></i> --}}
@@ -150,6 +161,7 @@
             <span class="badge">{{model.perfil.notaAreaEvaluada3}}</span>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-3 col-md-2 text-center icon-container">
             {{!-- <i class="fa fa-handshake-o"></i> --}}
@@ -190,6 +202,44 @@
       </div>
     </div>
   {{/each-in}}
+</div>
+
+<div class="questionary row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Tachas</div>
+
+      <div class="panel-body no-padding-top-bottom tabla-tachas">
+        <div class="row tabla-tachas-header">
+          <div class="col-md-1 text-center icon-container">
+            No.
+          </div>
+          <div class="col-md-8 col-md-offset-0 text-container">
+            Tacha
+          </div>
+          <div class="col-md-3">
+            Presentada por
+          </div>
+        </div>
+
+        {{#each model.tachas as |tacha index|}}
+          <div class="row">
+            <div class="col-md-1 text-center icon-container">
+              {{add index 1}}
+            </div>
+
+            <div class="col-md-8 col-md-offset-0 text-container">
+              {{{tacha.tacha}}}
+            </div>
+
+            <div class="col-md-3">
+              {{{tacha.presentadoPor}}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
 </div>
 
 {{#if disqusShortname}}
