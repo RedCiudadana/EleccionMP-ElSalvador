@@ -210,33 +210,39 @@
       <div class="panel-heading">Tachas</div>
 
       <div class="panel-body no-padding-top-bottom tabla-tachas">
-        <div class="row tabla-tachas-header">
-          <div class="col-md-1 text-center icon-container">
-            No.
+        {{#if (eq 0 tachasLength)}}
+          <div class="row tabla-tachas-header">
+            <div class="col-xs-12 text-center">No se encontraron tachas asociadas al candidato</div>
           </div>
-          <div class="col-md-8 col-md-offset-0 text-container">
-            Tacha
-          </div>
-          <div class="col-md-3">
-            Presentada por
-          </div>
-        </div>
-
-        {{#each model.tachas as |tacha index|}}
-          <div class="row">
+        {{else}}
+          <div class="row tabla-tachas-header">
             <div class="col-md-1 text-center icon-container">
-              {{add index 1}}
+              No.
             </div>
-
             <div class="col-md-8 col-md-offset-0 text-container">
-              {{{tacha.tacha}}}
+              Tacha
             </div>
-
             <div class="col-md-3">
-              {{{tacha.presentadoPor}}}
+              Presentada por
             </div>
           </div>
-        {{/each}}
+
+          {{#each model.tachas as |tacha index|}}
+            <div class="row">
+              <div class="col-md-1 text-center icon-container">
+                {{add index 1}}
+              </div>
+
+              <div class="col-md-8 col-md-offset-0 text-container">
+                {{{tacha.tacha}}}
+              </div>
+
+              <div class="col-md-3">
+                {{{tacha.presentadoPor}}}
+              </div>
+            </div>
+          {{/each}}
+        {{/if}}
       </div>
     </div>
   </div>
