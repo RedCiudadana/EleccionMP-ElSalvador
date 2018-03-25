@@ -20,6 +20,10 @@ export default Ember.Route.extend(ResetScrollMixin, {
     title: 'application breadcrumb'
   },
 
+  queryParams: {
+    fooYo: {}
+  },
+
   /**
    * Setear la URL de datos y de configuración en el servicio spreadhseet.
    * 
@@ -27,11 +31,17 @@ export default Ember.Route.extend(ResetScrollMixin, {
    *
    * TODO: Hacer esto en un lugar más decente, por amor al Señor
    */
-  beforeModel() {
+  beforeModel(transition) {
     const spreadsheetService = this.get('spreadsheets');
 
     // TODO: Agregar validación: si config.APP.dataSpreadsheetSourceUrl no esta definida,
     // lanzar error
+
+    // Si en los query parameters viene definido el valor para 'loadDataFromSpreadsheet',
+    // hacer override a la configuración para forzar la carga de data de los spreadsheets
+    if (transition.queryParams.hasOwnProperty('loadDataFromSpreadsheet')) {
+      config.APP.staticFilesUrl = null;
+    }
 
     return this.get('ajax')
 
