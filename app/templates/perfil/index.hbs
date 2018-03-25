@@ -91,10 +91,10 @@
   </div>
 </div>
 
-<div class="questionary row">
+<div class="buffer-top-30 row">
   <div class="col-md-6">
     <div class="panel panel-default">
-      <div class="panel-heading">Experiencia profesional</div>
+      <div class="panel-heading font-weight-600">Experiencia profesional</div>
 
       <div class="panel-body justify">
         {{model.perfil.experienciaProfesional}}
@@ -102,7 +102,7 @@
     </div>
 
     <div class="panel panel-default">
-      <div class="panel-heading">Experiencia académica</div>
+      <div class="panel-heading font-weight-600">Experiencia académica</div>
 
       <div class="panel-body justify">
         {{model.perfil.experienciaAcademica}}
@@ -110,7 +110,7 @@
     </div>
 
     <div class="panel panel-default">
-      <div class="panel-heading">Plan de trabajo</div>
+      <div class="panel-heading font-weight-600">Plan de trabajo</div>
 
       <div class="panel-body justify">
         {{model.perfil.planTrabajo}}
@@ -119,8 +119,9 @@
   </div>
 
   <div class="col-md-6">
+    {{!-- Tabla de gradación --}}
     <div class="panel panel-default">
-      <div class="panel-heading">Tabla de gradación</div>
+      <div class="panel-heading font-weight-600">Tabla de gradación</div>
 
       <div class="panel-body tabla-gradacion-content no-padding-top-bottom">
         <div class="row">
@@ -191,23 +192,10 @@
         </div>
       </div>
     </div>
-  </div>
 
-  {{#each-in model.perfil.recuadros as |key item|}}
+    {{!-- Tachas --}}
     <div class="panel panel-default">
-      {{#if item.label}}<div class="panel-heading">{{{item.label}}}</div>{{/if}}
-
-      <div class="panel-body">
-        {{{item.value}}}
-      </div>
-    </div>
-  {{/each-in}}
-</div>
-
-<div class="questionary row">
-  <div class="col-md-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">Tachas</div>
+      <div class="panel-heading font-weight-600">Tachas</div>
 
       <div class="panel-body no-padding-top-bottom tabla-tachas">
         {{#if (eq 0 tachasLength)}}
@@ -219,33 +207,43 @@
             <div class="col-md-1 text-center icon-container">
               No.
             </div>
-            <div class="col-md-8 col-md-offset-0 text-container">
+            <div class="col-md-7 col-md-offset-0 text-container">
               Tacha
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               Presentada por
             </div>
           </div>
 
           {{#each model.tachas as |tacha index|}}
-            <div class="row">
+            <a href={{tacha.tachaUrl}} target="_blank" style="display: block" class="row">
               <div class="col-md-1 text-center icon-container">
                 {{add index 1}}
               </div>
 
-              <div class="col-md-8 col-md-offset-0 text-container">
+              <div class="col-md-7 col-md-offset-0 text-container">
                 {{{tacha.tacha}}}
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-4">
                 {{{tacha.presentadoPor}}}
               </div>
-            </div>
+            </a>
           {{/each}}
         {{/if}}
       </div>
     </div>
   </div>
+
+  {{#each-in model.perfil.recuadros as |key item|}}
+    <div class="panel panel-default">
+      {{#if item.label}}<div class="panel-heading font-weight-600">{{{item.label}}}</div>{{/if}}
+
+      <div class="panel-body">
+        {{{item.value}}}
+      </div>
+    </div>
+  {{/each-in}}
 </div>
 
 {{#if disqusShortname}}
