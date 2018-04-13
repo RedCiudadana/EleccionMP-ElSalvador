@@ -11,17 +11,7 @@
     <img src="{{model.config.banner1Link}}" />
   {{/if}}
 
-  {{#if model.config.banner1Slider}}
-    {{#slick-slider
-      autoplay=true
-      autoplaySpeed=model.config.sliderAutoplaySpeed
-      adaptiveHeight=false
-    }}
-      {{#each model.config.mainPageSliderData as |link|}}
-        <img src="{{link.imageLink}}" alt="{{link.caption}}" />
-      {{/each}}
-    {{/slick-slider}}
-  {{/if}}
+  {{!-- TODO: Fix mobile rendering --}}
 
   {{!-- TODO: Pending implementation on config spreadsheet --}}
   {{#if model.config.banner1Accordion}}
@@ -89,6 +79,29 @@
     <a href="http://bit.ly/2G5LdgI">
       <img class="img-responsive center" src="app/img/descarga-google-play.png" />
     </a>
+  </div>
+</div>
+
+{{!-- Status banner --}}
+<div class="row" class="status-banner text-center">
+  <div class="col-md-12" style="padding-left: 0px; padding-right: 0px;">
+    <div style="background-color: #1b2b3a; color: #ffffff; padding: 18px; font-weight: 600;">
+      <span style="font-size: 34px;">
+        {{{model.config.procesoEleccionTitulo}}}
+      </span>
+    </div>
+
+    <div>
+      <div class="col-xs-12 col-md-6" style="background-color: #ffc80f; color: #ffffff; padding: 18px;">
+        <div class="col-md-12">
+          {{{model.config.procesoEleccionPasoActual}}}
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-6" style="background-color: #75bbcc; color: #ffffff; padding: 18px;">
+        {{{model.config.procesoEleccionSiguientePaso}}}
+      </div>
+    </div>
   </div>
 </div>
 

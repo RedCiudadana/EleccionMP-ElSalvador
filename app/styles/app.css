@@ -148,6 +148,10 @@ body.perfil .container.content-container {
     max-width: 100%;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 #descarga-app img {
     max-height: 50px;
 }
@@ -396,8 +400,16 @@ a:focus {
     border-color: #ffc80e;
 }
 
+.status-banner {
+    padding: 30px 75px 0px 75px;
+}
+
 /* Small devices only */
 @media (max-width: 480px) {
+    .status-banner {
+        padding: 0px;
+    }
+
     .navbar-brand img {
         width: auto;
     }
