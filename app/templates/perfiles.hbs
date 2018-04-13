@@ -67,7 +67,7 @@
 
 <div id="portfolio" class="portfolio grid-container portfolio-5 portfolio-masonry clearfix">
   {{#each model.perfiles as |perfil|}}
-    <article class="portfolio-item pf-media {{perfil.institucionSelector}}">
+    <article class="portfolio-item pf-media {{perfil.selector}}">
 
       <div class="portfolio-image">
         {{#link-to "perfil" perfil.id}}

@@ -26,6 +26,7 @@ Router.map(function() {
   this.route('investigacion');
 
   this.route('metodologia');
+  this.route('tabla-gradacion');
 });
 
 export default Router;

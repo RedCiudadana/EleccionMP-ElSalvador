@@ -71,6 +71,10 @@ export default Model.extend({
     return 'images/Magistrado.jpg';
   }),
 
+  isDescalificado: Ember.computed('estado', function() {
+    return this.get('estado') === 'Descalificado';
+  }),
+
   selector: Ember.computed('sexo', 'estado', function() {
     let returnValue = '';
 
