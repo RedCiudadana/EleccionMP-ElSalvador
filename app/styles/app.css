@@ -406,6 +406,10 @@ a:focus {
 
 /* Small devices only */
 @media (max-width: 480px) {
+    .tabla-gradacion-nombre: {
+        text-align: center;
+    }
+
     .status-banner {
         padding: 0px;
     }

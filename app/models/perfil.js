@@ -57,6 +57,10 @@ export default Model.extend({
 
   resultadosEvaluacion: attr(),
 
+  resultadosEvaluacionInt: Ember.computed('resultadosEvaluacion', function() {
+    return parseInt(this.get('resultadosEvaluacion'));
+  }),
+
   informacionGeneral: attr('informacion-general'),
 
   recuadros: attr('frente-a-frente'),
