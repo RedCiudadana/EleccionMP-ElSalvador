@@ -12,6 +12,18 @@
   {{/if}}
 
   {{!-- TODO: Fix mobile rendering --}}
+  {{#if model.config.banner1Slider}}
+    {{#slick-slider
+      autoplay=true
+      autoplaySpeed=model.config.sliderAutoplaySpeed
+      adaptiveHeight=false
+      arrows=false
+    }}
+      {{#each model.config.mainPageSliderData as |link|}}
+        <img src="{{link.imageLink}}" alt="{{link.caption}}" />
+      {{/each}}
+    {{/slick-slider}}
+  {{/if}}
 
   {{!-- TODO: Pending implementation on config spreadsheet --}}
   {{#if model.config.banner1Accordion}}
