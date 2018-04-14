@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import { run, scheduleOnce } from '@ember/runloop';
 
 const { computed } = Ember;
 
@@ -42,15 +43,19 @@ export default Ember.Controller.extend({
     }
   ),
 
+  _applyFilter() {
+    var $container = Ember.$('#portfolio');
+
+    $container.isotope({transitionDuration: '0.65s'});
+
+    $container.isotope({filter: this.get('currentSelector')});
+
+    return false;
+  },
+
   actions: {
     applyFilter() {
-      var $container = Ember.$('#portfolio');
-
-      $container.isotope({transitionDuration: '0.65s'});
-
-      $container.isotope({filter: this.get('currentSelector')});
-
-      return false;
+      return this._applyFilter();
     }
   }
 });
