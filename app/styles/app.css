@@ -453,3 +453,17 @@ a:focus {
 .tabla-tachas .row {
     padding: 12px 0px;
 }
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ *
+ * Taken from http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
