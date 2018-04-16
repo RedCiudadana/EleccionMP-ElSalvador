@@ -18,16 +18,13 @@ export default Ember.Route.extend({
         $container.isotope('layout');
       });
 
-      if (model.config.banner1Slider) {
-        let screenwidth = Ember.$('#slider').width();
-
+      if (model.config.banner1Accordion) {
         Ember.$('#slider').gridAccordion({
-          width: screenwidth,
+          width: Ember.$('#slider').width(),
           height: 250,
           columns: model.config.mainPageSliderData.length,
           distance: 2,
-          closedPanelWidth: 10,
-          closedPanelHeight: 10,
+          openedPanelWidth: 500,
           alignType: 'centerCenter',
           linkTarget: '_self',
           slideshow: true

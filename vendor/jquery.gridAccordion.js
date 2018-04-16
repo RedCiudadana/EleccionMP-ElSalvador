@@ -433,6 +433,7 @@
       return N
     }
   }
+
   e.fn.gridAccordion = function(e) {
     for (var n = [], r = 0; r < this.length; r++)
       if (!this[r].accordion) {
@@ -441,6 +442,7 @@
       }
     return n.length > 1 ? n : n[0]
   };
+
   e.fn.gridAccordion.defaults = {
     xmlSource: null,
     width: 500,
