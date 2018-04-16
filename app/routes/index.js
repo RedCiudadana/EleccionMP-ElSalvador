@@ -21,7 +21,7 @@ export default Ember.Route.extend({
       if (model.config.banner1Accordion) {
         Ember.$('#slider').gridAccordion({
           width: Ember.$('#slider').width(),
-          height: 250,
+          height: 700,
           columns: model.config.mainPageSliderData.length,
           distance: 2,
           openedPanelWidth: 500,
