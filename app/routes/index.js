@@ -22,6 +22,9 @@ export default Ember.Route.extend({
         Ember.$('#slider').gridAccordion({
           width: Ember.$('#slider').width(),
           height: 250,
+          captionHeight: 40,
+          captionTop: 200,
+          captionLeft: 100,
           columns: model.config.mainPageSliderData.length,
           distance: 2,
           openedPanelWidth: 500,

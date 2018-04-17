@@ -467,3 +467,6 @@ a:focus {
   display:         flex;
 }
 
+.caption .caption-background {
+    text-align: center;
+}
