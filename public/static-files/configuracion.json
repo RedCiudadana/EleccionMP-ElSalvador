@@ -25,7 +25,7 @@
   },
   {
     "key": "siteMainTitle",
-    "value": "<div class=\"row text-center\" style=\"padding: 30px 5px;\">\n  <h1 style=\"font-weight: 600; font-size: 38px;\">Conoce a los 6 finalistas del procesos de elección del Fiscal General del Ministerio Público de Guatemala</h1>\n</div>",
+    "value": "<div class=\"row text-center\" style=\"padding: 30px 5px;\">\n  <h1 style=\"font-weight: 600; font-size: 38px;\">Conoce a los 6 finalistas del proceso de elección del Fiscal General del Ministerio Público de Guatemala</h1>\n</div>",
     "tags": "",
     "observaciones": "Permite HTML"
   },
