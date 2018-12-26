@@ -1,0 +1,22 @@
+[
+  {
+    "field": "experienciaProfesional",
+    "label": "",
+    "section": "Experiencia Profesional"
+  },
+  {
+    "field": "experienciaAcademica",
+    "label": "",
+    "section": "Experiencia Académica"
+  },
+  {
+    "field": "notaAreaEvaluada3",
+    "label": "",
+    "section": "Proyección Humana e Idoneidad"
+  },
+  {
+    "field": "notaAreaEvaluada4Texto",
+    "label": "",
+    "section": "Cualidades Éticas"
+  }
+]

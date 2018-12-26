@@ -1,0 +1,44 @@
+[
+  {
+    "caption": "Edgar Estuardo Melchor Solorzano",
+    "route": "perfil",
+    "id": "candidato-5",
+    "link": "",
+    "imageLink": "https://raw.githubusercontent.com/RedCiudadana/Fotos-EleccionMP/master/slider/edgar.jpg"
+  },
+  {
+    "caption": "Gladys Verónica Ponce Mejicanos",
+    "route": "perfil",
+    "id": "candidato-8",
+    "link": "",
+    "imageLink": "https://raw.githubusercontent.com/RedCiudadana/Fotos-EleccionMP/master/slider/gladys.jpg"
+  },
+  {
+    "caption": "María Consuelo Porras Argueta",
+    "route": "perfil",
+    "id": "candidato-21",
+    "link": "",
+    "imageLink": "https://raw.githubusercontent.com/RedCiudadana/Fotos-EleccionMP/master/slider/maria.jpg"
+  },
+  {
+    "caption": "Miguel Ángel Gálvez Aguilar",
+    "route": "perfil",
+    "id": "candidato-28",
+    "link": "",
+    "imageLink": "https://raw.githubusercontent.com/RedCiudadana/Fotos-EleccionMP/master/slider/miguel.jpg"
+  },
+  {
+    "caption": "Brenda Dery Muñoz Sánchez de Molina",
+    "route": "perfil",
+    "id": "candidato-32",
+    "link": "",
+    "imageLink": "https://raw.githubusercontent.com/RedCiudadana/Fotos-EleccionMP/master/slider/brenda.jpg"
+  },
+  {
+    "caption": "Patricia Elizabet Gámez Barrera",
+    "route": "perfil",
+    "id": "candidato-39",
+    "link": "",
+    "imageLink": "https://raw.githubusercontent.com/RedCiudadana/Fotos-EleccionMP/master/slider/patricia.jpg"
+  }
+]
