@@ -24,50 +24,40 @@
     {{/slick-slider}}
   {{/if}}
 
-  {{#if model.config.banner1Accordion}}
-    <div class="hidden-xs">
-      <div class="accordion" id="slider">
-        {{#each model.config.mainPageSliderData as |link|}}
-          <li>
-            {{#if link.link}}
-              <a href="{{link.link}}">
-                <img src="{{link.imageLink}}" alt="{{link.caption}}" />
-              </a>
-            {{else}}
-              {{#if link.route}}
-                {{#link-to link.route link.id}}
-                  <img src="{{link.imageLink}}" alt="{{link.caption}}" />
-                {{/link-to}}
-              {{else}}
-                <img src="{{link.imageLink}}" alt="{{link.caption}}" />
-              {{/if}}
-            {{/if}}
-            <div class="caption">{{link.caption}}</div>
-          </li>
-        {{/each}}
-      </div>
-    </div>
+  <style>
+    .accordion li {
+      list-style: none;
+      position: absolute;
+      overflow: hidden;
+    }
 
-    {{!-- <div class="visible-xs">
-      <ul>
-        {{#each model.config.mainPageSliderData as |link|}}
-          <li>
-            {{#if link.link}}
-              <a href="{{link.link}}">
-                {{link.caption}}
-              </a>
-            {{else}}
-              {{#if link.route}}
-                {{#link-to link.route link.id}}
-                  {{link.caption}}
-                {{/link-to}}
-              {{/if}}
-            {{/if}}
-          </li>
-        {{/each}}
-      </ul>
-    </div> --}}
-  {{/if}}
+    .accordion li img {
+      height: 100%;
+      width: auto;
+    }
+
+    .accordion {
+      max-width: 800px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+
+  <div class="accordion">
+    {{#each model.config.mainPageSliderData as |link|}}
+      <li>
+        {{#link-to link.route link.id}}
+          <img src={{link.imageLink}} alt={{link.caption}}>
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </div>
+
+  <script type="text/javascript">
+  $('.accordion').accordion();
+  </script>
 
   {{#if model.config.banner1Footer}}
     {{{model.config.banner1Footer}}}

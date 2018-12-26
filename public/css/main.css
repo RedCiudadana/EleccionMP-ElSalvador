@@ -145,7 +145,7 @@ strong {
     -webkit-padding-start: 0px;
 }
 
-.accordion
+/*.accordion
 {
     position:relative;
     overflow:hidden;
@@ -212,7 +212,7 @@ strong {
 .accordion .caption p a
 {
     color:#FFF;
-}
+}*/
 
 #home-search {
     margin: 50px 0;
