@@ -1,0 +1,252 @@
+{{#if model.config.siteMainTitle}}
+  {{{model.config.siteMainTitle}}}
+{{/if}}
+
+<div id="banner" class="row">
+  {{#if model.config.banner1Title}}
+    {{{model.config.banner1Title}}}
+  {{/if}}
+
+  {{#if model.config.banner1Link}}
+    <img src="{{model.config.banner1Link}}" />
+  {{/if}}
+
+  {{#if model.config.banner1Slider}}
+    {{#slick-slider
+      autoplay=true
+      autoplaySpeed=model.config.sliderAutoplaySpeed
+      adaptiveHeight=false
+      arrows=false
+    }}
+      {{#each model.config.mainPageSliderData as |link|}}
+        <img src="{{link.imageLink}}" alt="{{link.caption}}" />
+      {{/each}}
+    {{/slick-slider}}
+  {{/if}}
+
+  {{#if model.config.banner1Accordion}}
+    <div class="hidden-xs">
+      <div class="accordion" id="slider">
+        {{#each model.config.mainPageSliderData as |link|}}
+          <li>
+            {{#if link.link}}
+              <a href="{{link.link}}">
+                <img src="{{link.imageLink}}" alt="{{link.caption}}" />
+              </a>
+            {{else}}
+              {{#if link.route}}
+                {{#link-to link.route link.id}}
+                  <img src="{{link.imageLink}}" alt="{{link.caption}}" />
+                {{/link-to}}
+              {{else}}
+                <img src="{{link.imageLink}}" alt="{{link.caption}}" />
+              {{/if}}
+            {{/if}}
+            <div class="caption">{{link.caption}}</div>
+          </li>
+        {{/each}}
+      </div>
+    </div>
+
+    {{!-- <div class="visible-xs">
+      <ul>
+        {{#each model.config.mainPageSliderData as |link|}}
+          <li>
+            {{#if link.link}}
+              <a href="{{link.link}}">
+                {{link.caption}}
+              </a>
+            {{else}}
+              {{#if link.route}}
+                {{#link-to link.route link.id}}
+                  {{link.caption}}
+                {{/link-to}}
+              {{/if}}
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
+    </div> --}}
+  {{/if}}
+
+  {{#if model.config.banner1Footer}}
+    {{{model.config.banner1Footer}}}
+  {{/if}}
+</div>
+
+<div id="descarga-app" class="row">
+  <div class="col-xs-12 col-md-4">
+    <span id="descarga-app-title">Descarga la app en:</span>
+  </div>
+
+  <div class="col-xs-6 col-md-4 text-center">
+    <a href="https://apple.co/2EC1KMj">
+      <img class="img-responsive center" src="app/img/descarga-app-store.png" />
+    </a>
+  </div>
+
+  <div class="col-xs-6 col-md-4 text-center">
+    <a href="http://bit.ly/2G5LdgI">
+      <img class="img-responsive center" src="app/img/descarga-google-play.png" />
+    </a>
+  </div>
+</div>
+
+{{!-- Status banner --}}
+<div class="row status-banner text-center" style="padding-bottom: 0px;">
+  <div class="col-md-12" style="padding-left: 0px; padding-right: 0px;">
+    <div style="background-color: #1b2b3a; color: #ffffff; padding: 18px; font-weight: 600;">
+      <span style="font-size: 34px;">
+        {{{model.config.procesoEleccionTitulo}}}
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6 visible-xs" style="background-color: #ffc80f; color: #ffffff; padding: 18px;">
+    <div class="col-md-12">
+      {{{model.config.procesoEleccionPasoActual}}}
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6 visible-xs" style="background-color: #75bbcc; color: #ffffff; padding: 18px;">
+    {{{model.config.procesoEleccionSiguientePaso}}}
+  </div>
+</div>
+
+<div class="row row-eq-height status-banner text-center hidden-xs" style="padding-top: 0px;">
+  <div class="col-xs-12 col-md-6" style="background-color: #ffc80f; color: #ffffff; padding: 18px;">
+    <div class="col-md-12">
+      {{{model.config.procesoEleccionPasoActual}}}
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6" style="background-color: #75bbcc; color: #ffffff; padding: 18px;">
+    {{{model.config.procesoEleccionSiguientePaso}}}
+  </div>
+</div>
+
+{{#if model.config.useFrontFilterWidget}}
+  <div class="row search-container-row">
+    <div class="jumbotron search-container search-and-filter">
+      <div class="search-container" style="text-align: center;">
+        {{#power-select
+          selected=currentCandidato
+          options=model.perfiles
+          onchange=(route-action 'selectPerfil')
+          searchField='nombre'
+          placeholder='Busca tu candidato'
+          noMatchesMessage='Sin resultados'
+            as |candidato|
+        }}
+          <strong>{{candidato.nombre}}</strong>
+        {{/power-select}}
+      </div>
+
+      <div class="filters-container">
+        <strong>Filtrar por: </strong>
+        <label>
+          {{one-way-checkbox
+            esMujer
+            update=(queue
+              (action (mut esMujer))
+              (action 'applyFilter')
+            )
+          }}
+          Mujer
+        </label>
+
+        <label>
+          {{one-way-checkbox
+            esHombre
+            update=(queue
+              (action (mut esHombre))
+              (action 'applyFilter')
+            )
+          }}
+          Hombre
+       </label>
+
+        <label>
+          {{one-way-checkbox
+            estaEnProceso
+            update=(queue
+              (action (mut estaEnProceso))
+              (action 'applyFilter')
+            )
+          }}
+          En proceso
+       </label>
+
+        <label>
+          {{one-way-checkbox
+            estaDescalificado
+            update=(queue
+              (action (mut estaDescalificado))
+              (action 'applyFilter')
+            )
+          }}
+          Descalificado
+       </label>
+     </div>
+    </div>
+  </div>
+{{/if}}
+
+{{#if model.config.useFrontPortfolioVisualization}}
+  {{front-porfolio-visualization
+    perfiles=model.perfiles
+    onDidInsertElement=(action 'applyFilter')
+  }}
+{{/if}}
+
+{{#if model.config.useFrontTableVisualization}}
+  <table class="table">
+    <tr>
+      {{#each model.frontTableVisualizationConfig as |field|}}
+        <th>{{field.tableTitle}}</th>
+      {{/each}}
+    </tr>
+
+    {{#each model.perfiles as |perfil|}}
+      <tr>
+        {{#each model.frontTableVisualizationConfig as |field|}}
+          <td>
+            {{#if field.isLink}}
+              {{#link-to 'perfil' perfil.id}}
+                {{get perfil field.fieldName}}
+              {{/link-to}}
+            {{else}}
+              {{get perfil field.fieldName}}
+            {{/if}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </table>
+{{/if}}
+
+{{#if model.config.mainPageLinks}}
+  <div class="row main-page-links bg-color-gray" style="margin-top: 20px; padding: 20px 5px;">
+    {{#each model.config.mainPageLinks as |link|}}
+      <div class="col-sm-6">
+        {{#if link.link}}
+          <a href="{{link.link}}">
+            {{#if link.imageLink}}
+              <img src="{{link.imageLink}}" title="{{link.title}}" class="img-responsive center"/>
+            {{else}}
+              {{link.title}}
+            {{/if}}
+          </a>
+        {{else}}
+          {{#link-to link.route}}
+            {{#if link.imageLink}}
+              <img src="{{link.imageLink}}" title="{{link.title}}" class="img-responsive center"/>
+            {{else}}
+              {{link.title}}
+            {{/if}}
+          {{/link-to}}
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+{{/if}}

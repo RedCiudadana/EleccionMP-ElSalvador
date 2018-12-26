@@ -1,0 +1,45 @@
+{{set-body-class 'perfil'}}
+
+<section id="election" style="margin-top: 35px;">
+  {{#if model.postuladorFuncionalidades}}
+    <div style="background-color: #ffffff; margin-bottom: 25px;">
+      <div class="nav-candidator">
+        <nav>
+          <ul class="list-inline">
+            {{#each model.postuladorFuncionalidades as |link|}}
+              {{#active-link}}
+                {{#if link.link}}
+                  <a href="{{link.link}}" title="{{link.title}}">
+                    {{#if link.iconClass}}
+                      <i class="{{link.iconClass}}"></i>
+                    {{/if}}
+                    {{link.name}}
+                  </a>
+                {{else}}
+                  {{#link-to link.route title=link.title}}
+                    {{#if link.iconClass}}
+                      <i class="{{link.iconClass}}"></i>
+                    {{/if}}
+                    {{link.name}}
+                  {{/link-to}}
+                {{/if}}
+              {{/active-link}}
+            {{/each}}
+            <li class="social-media">
+              {{twitter-share count='horizontal' hashtags='EleccionMP'}}
+              {{facebook-share fb-layout='button_count'}}
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  {{/if}}
+
+  {{outlet}}
+</section>
+
+{{#if disqusShortname}}
+  <div class="row bg-color-white">
+    {{disqus-comments identifier=model.postulador.disqusIdentifier}}
+  </div>
+{{/if}}

@@ -1,0 +1,29 @@
+<div class="col-sm-12 col-md-offset-1 col-md-10 buffer-top-30">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center" style="background-color: #1b2b3a; font-size: 28px;">Resultados de tabla de gradación</div>
+    <div class="panel-body tabla-gradacion-content" style="padding-bottom: 0px; padding-top: 0px;">
+
+      {{#each sortedPerfiles as |perfil|}}
+        <div class="row">
+
+          <div class="col-xs-12 col-sm-2 text-center foto-container">
+            <img
+              src="{{perfil.fotoPerfil}}"
+              alt="{{perfil.nombre}}"
+              class="img-responsive center-block"
+              style="max-width: 100px;"
+            >
+          </div>
+
+          <div class="col-xs-12 col-sm-8 text-container tabla-gradacion-nombre">
+            {{perfil.nombre}}
+          </div>
+
+          <div class="col-xs-12 col-sm-2 text-center">
+            <span class="badge">{{perfil.resultadosEvaluacion}}</span>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

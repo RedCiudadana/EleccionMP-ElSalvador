@@ -1,0 +1,251 @@
+<div class="container-profile">
+  <div class="profile-candidate">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="candidate-img-profile" style="padding-top: 20px;">
+          <img
+            src="{{model.perfil.fotoPerfil}}"
+            alt="{{model.perfil.nombre}}"
+            border="0"
+            class="img-responsive center-block"
+          >
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <h3 style="padding-left: 0px;">{{model.perfil.nombre}}</h3>
+        <table class="table">
+          <tbody>
+            {{#each-in model.perfil.informacionGeneral as |key item|}}
+              <tr>
+                <td>
+                  {{#if item.label}}<span>{{{item.label}}}</span>{{/if}}
+                  {{{item.value}}}
+                </td>
+              </tr>
+            {{/each-in}}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-4 social-side" style="padding-left: 40px; padding-right: 40px;">
+        {{#if documentosDisponibles}}
+          <h4 style="font-weight: bold; padding-top: 20px;">Datos abiertos</h4>
+        {{/if}}
+
+        {{#each documentosDisponibles as |documento|}}
+          <p class="datos-abiertos">
+            <a
+              href="{{documento.urlDocumento}}"
+              class="btn btn-{{documento.cssClasses}} width-full"
+              target="_blank"
+              style="font-weight: 400;"
+            >
+              {{documento.nombreDocumento}}
+            </a>
+          </p>
+        {{/each}}
+
+        <ul class="list-inline text-center" style="font-size: 16px;">
+          {{#if model.perfil.tw}}
+            <li>
+              <i class="fa fa-twitter" style="font-size: 20px;"></i>
+              <a
+                href="https://twitter.com/{{model.perfil.tw}}"
+                class="social-link-candidate"
+                target="_blank">@{{model.perfil.tw}}
+              </a>
+            </li>
+          {{/if}}
+
+          {{#if model.perfil.fb}}
+            <li>
+              <i class="fa fa-facebook-official" style="font-size: 20px;"></i>
+              <a
+                href="{{model.perfil.fb}}"
+                class="social-link-candidate"
+                target="_blank"
+              >
+                {{model.perfil.nombre}}
+              </a>
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="biografia-container" class="row">
+  <div class="col-md-3 text-center">
+    <img
+      src="app/img/logo-libro.png"
+      class="img-responsive center"
+      style="max-width: 120px; margin-top: 20px; margin-bottom: 20px;" />
+  </div>
+  <div class="col-md-8">
+    <h3>Biografía</h3>
+    <p style="margin-bottom: 30px;" class="justify">
+      {{model.perfil.biografia}}
+    </p>
+  </div>
+</div>
+
+<div class="buffer-top-30 row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading font-weight-600">Experiencia profesional</div>
+
+      <div class="panel-body justify">
+        {{model.perfil.experienciaProfesional}}
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading font-weight-600">Experiencia académica</div>
+
+      <div class="panel-body justify">
+        {{model.perfil.experienciaAcademica}}
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading font-weight-600">Plan de trabajo</div>
+
+      <div class="panel-body justify">
+        {{model.perfil.planTrabajo}}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    {{!-- Tabla de gradación --}}
+    <div class="panel panel-default">
+      <div class="panel-heading font-weight-600">Tabla de gradación</div>
+
+      <div class="panel-body tabla-gradacion-content no-padding-top-bottom">
+        <div class="row">
+          <div class="col-xs-3 col-md-2 text-center icon-container">
+            {{!-- <i class="fa fa-graduation-cap"></i> --}}
+            <img src="app/img/logo-aspectos-academicos.png" class="img-responsive center" />
+          </div>
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
+            Aspectos académicos
+          </div>
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
+            <span class="badge">{{model.perfil.notaAreaEvaluada1}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-2 text-center icon-container">
+            {{!-- <i class="fa fa-suitcase"></i> --}}
+            <img src="app/img/logo-aspectos-profesionales.png" class="img-responsive center" />
+          </div>
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
+            Aspectos profesionales
+          </div>
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
+            <span class="badge">{{model.perfil.notaAreaEvaluada2}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-2 text-center icon-container">
+            {{!-- <i class="fa fa-check"></i> --}}
+            <img src="app/img/logo-proyeccion-humana.png" class="img-responsive center" />
+          </div>
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
+            Proyección humana e idoneidad
+          </div>
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
+            <span class="badge">{{model.perfil.notaAreaEvaluada3}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-2 text-center icon-container">
+            {{!-- <i class="fa fa-handshake-o"></i> --}}
+            <img src="app/img/logo-cualidades-eticas.png" class="img-responsive center" />
+          </div>
+          <div class="col-xs-7 col-md-8 col-md-offset-0 text-container">
+            Cualidades éticas y de probidad
+          </div>
+          <div class="col-xs-2 col-md-2" style="padding-left: 5px; padding-right: 5px;">
+            <span class="badge">
+              {{#if model.perfil.notaAreaEvaluada4}}
+                <li class="fa fa-check"></li>
+              {{else}}
+                <li class="fa fa-times"></li>
+              {{/if}}
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-7 col-xs-offset-3 text-container">
+            Puntaje total
+          </div>
+          <div class="col-xs-2" style="padding-left: 5px; padding-right: 5px;">
+            <span class="badge">{{model.perfil.resultadosEvaluacion}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Tachas --}}
+    <div class="panel panel-default">
+      <div class="panel-heading font-weight-600">Tachas</div>
+
+      <div class="panel-body no-padding-top-bottom tabla-tachas">
+        {{#if (eq 0 tachasLength)}}
+          <div class="row tabla-tachas-header">
+            <div class="col-xs-12 text-center">No se encontraron tachas asociadas al candidato</div>
+          </div>
+        {{else}}
+          <div class="row tabla-tachas-header hidden-xs">
+            <div class="col-xs-1 col-md-1 text-center icon-container">
+              No.
+            </div>
+            <div class="col-xs-6 col-md-7 col-md-offset-0 text-container">
+              Tacha
+            </div>
+            <div class="col-xs-4 col-md-4">
+              Presentada por
+            </div>
+          </div>
+
+          {{#each model.tachas as |tacha index|}}
+            <a href={{tacha.tachaUrl}} target="_blank" style="display: block" class="row">
+              <div class="hidden-xs col-md-1 text-center icon-container">
+                {{add index 1}}
+              </div>
+
+              <div class="col-xs-8 col-md-7 col-md-offset-0 text-container">
+                <span class="hidden-md">{{add index 1}}.</span> {{{tacha.tacha}}}
+              </div>
+
+              <div class="col-xs-4 col-md-4">
+                {{{tacha.presentadoPor}}}
+              </div>
+            </a>
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  {{#each-in model.perfil.recuadros as |key item|}}
+    <div class="panel panel-default">
+      {{#if item.label}}<div class="panel-heading font-weight-600">{{{item.label}}}</div>{{/if}}
+
+      <div class="panel-body">
+        {{{item.value}}}
+      </div>
+    </div>
+  {{/each-in}}
+</div>
+
+{{#if disqusShortname}}
+  {{disqus-comments identifier=model.perfil.disqusIdentifier}}
+{{/if}}

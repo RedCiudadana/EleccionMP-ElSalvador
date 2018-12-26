@@ -1,0 +1,52 @@
+{{set-body-class 'perfil'}}
+
+<section id="election" style="margin-top: 35px;">
+  {{#if model.config.perfilFuncionalidades}}
+    <div style="background-color: #ffffff; margin-bottom: 25px;">
+      <div class="nav-candidator">
+        <nav>
+          <ul class="list-inline">
+            {{#each model.config.perfilFuncionalidades as |link|}}
+              {{#active-link}}
+                {{#if link.link}}
+                  <a href="{{link.link}}" title="{{link.title}}">
+                    {{#if link.iconClass}}
+                      <i class="{{link.iconClass}}"></i>
+                    {{/if}}
+                    {{link.name}}
+                  </a>
+                {{else}}
+                  {{#link-to link.route title=link.title}}
+                    {{#if link.iconClass}}
+                      <i class="{{link.iconClass}}"></i>
+                    {{/if}}
+                    {{link.name}}
+                  {{/link-to}}
+                {{/if}}
+              {{/active-link}}
+            {{/each}}
+            <li class="social-media">
+              {{twitter-share
+                  count='horizontal'
+                  hashtags='EleccionMP'
+                  text=applicationConfig.twitterShareLink
+                  via='Redxguate'
+              }}
+              {{facebook-share fb-layout='button_count'}}
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  {{/if}}
+
+  {{outlet}}
+</section>
+
+{{#if disqusShortname}}
+  <div class="row bg-color-white">
+    <div class="col-xs-12">
+      {{disqus-comments identifier=model.perfil.disqusIdentifier}}
+    </div>
+  </div>
+{{/if}}

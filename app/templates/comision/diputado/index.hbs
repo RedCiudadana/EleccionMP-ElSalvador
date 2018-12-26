@@ -1,0 +1,143 @@
+<div class="container-profile">
+  <div class="profile-candidate">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="candidate-img-profile" style="padding-top: 20px;">
+          <img
+            src="{{model.postulador.fotoPerfil}}"
+            alt="{{model.postulador.nombre}}"
+            border="0"
+            class="img-responsive center-block"
+          >
+        </div>
+
+        <ul class="list-inline text-center" style="font-size: 16px;">
+          {{#if model.postulador.tw}}
+            <li>
+              <i class="fa fa-twitter" style="font-size: 20px;"></i>
+              <a
+                href="https://twitter.com/{{model.postulador.tw}}"
+                class="social-link-candidate"
+                target="_blank">@{{model.postulador.tw}}
+              </a>
+            </li>
+          {{/if}}
+
+          {{#if model.postulador.fb}}
+            <li>
+              <i class="fa fa-facebook-official" style="font-size: 20px;"></i>
+              <a
+                href="{{model.postulador.fbInstitucion}}"
+                class="social-link-candidate"
+                target="_blank"
+              >
+                {{model.postulador.nombre}}
+              </a>
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+
+      <div class="col-md-5">
+        <h3 style="padding-left: 0px;">{{model.postulador.nombre}}</h3>
+        <table class="table">
+          <tbody>
+            {{#each-in model.postulador.informacionGeneral as |key item|}}
+              <tr>
+                <td>
+                  {{#if item.label}}<span>{{{item.label}}}</span>{{/if}}
+                  {{{item.value}}}
+                </td>
+              </tr>
+            {{/each-in}}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-4 social-side" style="padding-left: 40px; padding-right: 40px;">
+        <div style="margin-top: 30px; text-align: center;">
+          <strong>{{model.postulador.institucion}}</strong>
+        </div>
+
+        {{#if model.postulador.fotoInstitucion}}
+          <div class="logo-partido">
+            <img
+              src="{{model.postulador.fotoInstitucion}}"
+              alt="{{model.postulador.institucion}}"
+            >
+          </div>
+        {{/if}}
+
+        <ul class="list-inline text-center" style="font-size: 16px;">
+          {{#if model.postulador.twInstitucion}}
+            <li>
+              <i class="fa fa-twitter" style="font-size: 20px;"></i>
+              <a
+                href="https://twitter.com/{{model.postulador.twInstitucion}}"
+                class="social-link-candidate"
+                target="_blank">@{{model.postulador.twInstitucion}}
+              </a>
+            </li>
+          {{/if}}
+
+          {{#if model.postulador.fbInstitucion}}
+            <li>
+              <i class="fa fa-facebook-official" style="font-size: 20px;"></i>
+              <a
+                href="{{model.postulador.fbInstitucion}}"
+                class="social-link-candidate"
+                target="_blank"
+              >
+                {{model.postulador.institucion}}
+              </a>
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row postulador-paneles">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Biografía</div>
+      <div class="panel-body justify">{{{model.postulador.biografia}}}</div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Trayectoria</div>
+      <div class="panel-body justify">{{{model.postulador.trayectoria}}}</div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Resultados evaluación</div>
+      <div class="panel-body tabla-gradacion-content">
+
+        {{#each model.resultadosEvaluaciones as |resultadoEvaluacion|}}
+          <div class="row">
+
+            <div class="col-xs-2 text-center foto-container">
+              <img
+                src="{{resultadoEvaluacion.perfil.fotoPerfil}}"
+                alt="{{resultadoEvaluacion.perfil.nombre}}"
+                class="img-responsive center-block"
+                style="max-width: 100px;"
+              >
+            </div>
+            <div class="col-xs-8 text-container">
+              {{resultadoEvaluacion.perfil.nombre}}
+            </div>
+            <div class="col-xs-2">
+              <span class="badge">{{resultadoEvaluacion.resultado}}</span>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

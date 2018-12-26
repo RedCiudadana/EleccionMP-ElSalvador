@@ -1,0 +1,93 @@
+{{#if model.config.useFrontFilterWidget}}
+  <div class="row search-container-row">
+    <div class="jumbotron search-container search-and-filter">
+      <div class="search-container" style="text-align: center;">
+        {{#power-select
+          selected=currentCandidato
+          options=model.perfiles
+          onchange=(route-action 'selectPerfil')
+          searchField='nombre'
+          placeholder='Busca tu candidato'
+          noMatchesMessage='Sin resultados'
+            as |candidato|
+        }}
+          <strong>{{candidato.nombre}}</strong>
+        {{/power-select}}
+      </div>
+
+      <div class="filters-container">
+        <strong>Filtrar por: </strong>
+        <label>
+          {{one-way-checkbox
+            esMujer
+            update=(queue
+              (action (mut esMujer))
+              (action 'applyFilter')
+            )
+          }}
+          Mujer
+        </label>
+
+        <label>
+          {{one-way-checkbox
+            esHombre
+            update=(queue
+              (action (mut esHombre))
+              (action 'applyFilter')
+            )
+          }}
+          Hombre
+       </label>
+
+        <label>
+          {{one-way-checkbox
+            estaEnProceso
+            update=(queue
+              (action (mut estaEnProceso))
+              (action 'applyFilter')
+            )
+          }}
+          En proceso
+       </label>
+
+        <label>
+          {{one-way-checkbox
+            estaDescalificado
+            update=(queue
+              (action (mut estaDescalificado))
+              (action 'applyFilter')
+            )
+          }}
+          Descalificado
+       </label>
+     </div>
+    </div>
+  </div>
+{{/if}}
+
+<div id="portfolio" class="portfolio grid-container portfolio-5 portfolio-masonry clearfix">
+  {{#each model.perfiles as |perfil|}}
+    <article class="portfolio-item pf-media {{perfil.selector}}">
+
+      <div class="portfolio-image">
+        {{#link-to "perfil" perfil.id}}
+          <img alt="{{perfil.cargoNombreCompleto}}" src="{{perfil.fotoPerfil}}" />
+        {{/link-to}}
+      </div>
+
+      <div class="portfolio-desc">
+        <h3>
+          {{#link-to 'perfil' perfil.id}}
+            {{perfil.nombre}}
+          {{/link-to}}
+        </h3>
+        <span>
+          {{#link-to 'perfil' perfil.id}}
+            {{perfil.cargoNombreCorto}}
+          {{/link-to}}
+        </span>
+      </div>
+
+    </article>
+  {{/each}}
+</div>
